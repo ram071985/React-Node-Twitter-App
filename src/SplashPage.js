@@ -1,28 +1,23 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Jumbotron, Button } from "react-bootstrap";
-import './index.css'
-import colImage from './SUNRISE-BUILDING-PHOTOGRAPHY-809801.jpeg';
-
-
-
+import { Container, Row, Col, Image } from "react-bootstrap";
+import "./index.css";
+import colImage from "./SILHOUETTE-PHOTOGRAPHY-OF-CLOUDS-692116.jpeg";
+import twitterContainer from "./Twitter_Logo_WhiteOnImage.png";
 
 function SplashPage() {
-  const imageUrl = window.innerWidth >= 650 ? colImage : colImage;
   return (
-    <Container>
+    <Container fluid>
       <br />
       <br />
-      <Jumbotron className="mt-5 jumbotron" style={{backgroundImage: `url(${imageUrl})`}}>
-        <h1 className="headline">Welcome To My Twitter Search Api</h1>
-        <p>
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <p>
-          <Button variant="primary">Search now!</Button>
-        </p>
-      </Jumbotron>
+      <br />
+      <Row>
+        <Col >
+        <h1 className="top-left" id="header-text">Welcome To Twitter Search Api</h1>
+        <Image className="mt-5 jumbotron" src={colImage} fluid />
+        <Image className="twitter-logo" src={twitterContainer} />
+        </Col>
+      </Row>
     </Container>
   );
 }

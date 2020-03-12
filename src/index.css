@@ -1,6 +1,55 @@
+body {
+    background-color: rgb(255, 222, 172);
+}
+
+.color-nav {
+    background-color: rgb(255, 164, 79);
+}
+
+.jumbotron {
+   background-repeat: no-repeat;
+   padding: 0;
+   height: 400px;
+
+}
 
 
 .headline {
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: white;
 }
+
+img.mt-5.jumbotron.img-fluid {
+    width: 1200px;
+}
+
+div.col {
+    padding: 0px;
+}
+
+.container {
+    color: white;
+    position: relative;
+}
+
+.top-left {
+    position: absolute;
+    top: 95px;
+    left: 30px;
+    font-size: 2.8rem;
+    opacity: 0.8;
+}
+
+.twitter-logo {
+ width: 140px;
+ height: 140px;
+ position: absolute;
+ top: 55px;
+ right: 100px;
+ opacity: 0.7;
+}
+
+
+
+
+
