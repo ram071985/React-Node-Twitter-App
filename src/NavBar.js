@@ -8,12 +8,12 @@ function NavBar() {
   return (
     <Container>
       <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
-        <Navbar.Brand  href={<Search />}>Twitter Search Api</Navbar.Brand>
+        <Navbar.Brand  href="">Twitter Search Api</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Search</Nav.Link>
+  <Nav.Link href={<NavBar /></Nav>}>Search</Nav.Link>
             <Nav.Link href="#link">Random</Nav.Link>
           </Nav>
         </Navbar.Collapse>
