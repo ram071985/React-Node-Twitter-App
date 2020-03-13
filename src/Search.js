@@ -7,8 +7,8 @@ import NavBar from './NavBar.js'
 class Search extends Component {
   render() {
     return (
-    <NavBar />
         <Container>
+            <NavBar />
             <Row>
                 <Col>
                 <Form.Group>
