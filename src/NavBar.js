@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
@@ -6,7 +6,8 @@ import Search from "./Search.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SplashPage from "./SplashPage.js"
 
-export default function NavBar() {
+class NavBar extends Component {
+  render() {
   return (
     <Router>
       <Container>
@@ -43,4 +44,7 @@ export default function NavBar() {
       </Container>
     </Router>
   );
+  }
 }
+
+export default NavBar;

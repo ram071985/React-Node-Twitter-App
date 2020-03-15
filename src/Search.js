@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import './index.css';
-import NavBar from './NavBar.js'
 
 class Search extends Component {
   render() {
     return (
         <Container>
-            <NavBar />
             <Row>
                 <Col>
                 <Form.Group>
