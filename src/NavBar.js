@@ -14,12 +14,15 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-  <Nav.Link onClick={<Search />}>Search</Nav.Link>
-            <Nav.Link href="#link">Random</Nav.Link>
+            <Nav.Link as={link} to="/">Home</Nav.Link>
+  <Nav.Link as={link} to='/Search'>Search</Nav.Link>
+            <Nav.Link as={link} to="/Random">Random</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
   </div>
-  )
+  <div>
+
+  </div>
+  );
 }
