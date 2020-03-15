@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 export default function NavBar() {
   return (
-   
-    <div>
+   <Router>
+   <Container>
       <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
         <Navbar.Brand as={link} to='/'>Twitter Search Api</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -20,9 +20,7 @@ export default function NavBar() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-  </div>
-  <div>
-
-  </div>
-  );
+</Container>
+  </Router>
+  )
 }
