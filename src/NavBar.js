@@ -5,13 +5,12 @@ import './index.css';
 import Search from './Search.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-function NavBar() {
+export default function NavBar() {
   return (
-    <Router>
-    <Container>
-    
+   
+    <div>
       <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
-        <Navbar.Brand  <Link to="/SplashPage.js">Twitter Search Api</Link></Navbar.Brand>
+        <Navbar.Brand as={link} to='/'>Twitter Search Api</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
@@ -19,12 +18,8 @@ function NavBar() {
   <Nav.Link onClick={<Search />}>Search</Nav.Link>
             <Nav.Link href="#link">Random</Nav.Link>
           </Nav>
-          <Switch>
         </Navbar.Collapse>
       </Navbar>
-    </Container>
-    </Router>
-  );
+  </div>
+  )
 }
-
-export default NavBar;
