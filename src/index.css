@@ -5,11 +5,13 @@ body {
 .color-nav {
     background-color: rgb(255, 164, 79);
 }
+
 .container {
     background-color:rgb(255, 218, 162);
     color: white;
     margin-top: 100px;
     padding: 0 20px;
+    width: 100%;
 } 
   
 .twitter-logo {
@@ -38,6 +40,42 @@ opacity: 0.8;
 
 .user-handle {
     color: grey;
+}
+
+.tweet-text {
+    color: black;
+    margin-left: 65px;
+    top: 41px !important;
+    left: 16px !important;
+    position: absolute;
+    padding-right: 50px;
+}
+
+.retweet-image {
+    position: absolute;
+    margin-left: 65px;
+    bottom: 10px;
+}
+
+.retweet-num {
+    color: grey;
+    position: absolute;
+    Margin: 0 0 0 100px;
+    bottom: 10px;
+}
+
+.like-image {
+    position: absolute;
+    bottom: 8px;
+    left: 230px;
+}
+
+
+.like-num {
+    color: grey;
+    position: absolute;
+    Margin: 0 0 0 250px;
+    bottom: 10px;
 }
 
 @media screen and (max-width: 775px) {
