@@ -9,6 +9,7 @@ body {
     background-color:rgb(255, 218, 162);
     color: white;
     margin-top: 100px;
+    padding: 0 20px;
 } 
   
 .twitter-logo {
@@ -21,6 +22,21 @@ opacity: 0.8;
     color: black;
     opacity: 0.8;
 }
+
+.control-form {
+    width: 90%;
+}
+
+@media screen and (max-width: 775px) {
+   .topic-button {
+       display: block !important;
+     margin-left: 0 !important;
+     margin-right: 0 !important;
+     margin-top: 10px !important;
+   }
+}
+
+
 
 
 
