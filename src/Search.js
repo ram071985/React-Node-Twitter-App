@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import './index.css';
 import Reid from "./images/reid.png";
 
@@ -22,8 +22,8 @@ class Search extends Component {
             <br />
             <Row className="tweet-row">
               <Col>
-              <Image src={Reid} />
-              <h6 className="real-name ml-5 mt-3">Reid Muchow</h6>
+              <Image className="d-inline mt-1 mr-1 ml-1" src={Reid} />
+              <h6 className="d-inline real-name ml-1 mt-2">Reid Muchow</h6>
               </Col>
             </Row>
             <br />
