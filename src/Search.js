@@ -23,7 +23,8 @@ class Search extends Component {
             <Row className="tweet-row">
               <Col>
               <Image className="d-inline mt-1 mr-1 ml-1" src={Reid} />
-              <h6 className="d-inline real-name ml-1 mt-2">Reid Muchow</h6>
+              <h6 className="d-inline real-name ml-1 mt-1"><strong>Reid Muchow</strong></h6>
+              <h7 className="d-inline ml-2 user-handle">@ReidMuchow</h7>
               </Col>
             </Row>
             <br />

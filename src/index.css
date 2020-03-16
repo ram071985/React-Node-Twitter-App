@@ -36,6 +36,10 @@ opacity: 0.8;
     color: black;
 }
 
+.user-handle {
+    color: grey;
+}
+
 @media screen and (max-width: 775px) {
    .topic-button {
        display: block !important;
