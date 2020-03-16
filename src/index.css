@@ -27,6 +27,15 @@ opacity: 0.8;
     width: 90%;
 }
 
+.tweet-row {
+    height: 210px;
+    background-color: white;
+}
+
+.real-name {
+    color: black;
+}
+
 @media screen and (max-width: 775px) {
    .topic-button {
        display: block !important;
