@@ -5,6 +5,7 @@ import "./index.css";
 import Search from "./Search.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SplashPage from "./SplashPage.js"
+import Random from "./Random.js"
 
 class NavBar extends Component {
   render() {
@@ -38,7 +39,7 @@ class NavBar extends Component {
              <Search />
           </Route>
           <Route path="/Random">
-             
+             <Random />
           </Route>
         </Switch>
       </Container>

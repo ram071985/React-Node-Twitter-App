@@ -78,6 +78,30 @@ opacity: 0.8;
     bottom: 10px;
 }
 
+
+
+.favorite-name {
+    color: black;
+}
+
+.column-one {
+background-color: rgb(248, 251, 255);
+margin:20px;
+height: 65px;
+width: 150px !important;
+padding: 0 0 25px 25px;
+}
+
+.column-two {
+    background-color: rgb(244, 249, 255);
+    margin:20px;
+    width: 150px;
+    }
+    
+.favorite-name-random {       
+     color: black;
+    }
+
 @media screen and (max-width: 775px) {
    .topic-button {
        display: block !important;
