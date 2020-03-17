@@ -147,6 +147,10 @@ div.col-4-4.col {
 
 }
 
+.column-four.col {
+width: 290px !important;
+}
+
 @media screen and (max-width: 775px) {
    .topic-button {
        display: block !important;
