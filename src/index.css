@@ -151,6 +151,12 @@ div.col-4-4.col {
 width: 290px !important;
 }
 
+@media screen and (max-width: 995px) {
+    .card-row {
+        display: block !important;
+    }
+}
+
 @media screen and (max-width: 775px) {
    .topic-button {
        display: block !important;

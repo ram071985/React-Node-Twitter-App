@@ -16,37 +16,37 @@ class Random extends Component {
           </Col>
         </Row>
         <br />
-        <Row>
-          <Col className=" col-4">
-            <button className="btn btn-warning" size="lg">
+        <Row className="card-row">
+          <Col className="col-4">
+            <button className="d-block btn btn-warning" size="lg">
             <Image className="d-inline mr-2 reid-random" src={Reid} />
             <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
             <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4">
-          <button className="btn btn-warning" size="lg">
+          <button className="d-block btn btn-warning" size="lg">
             <Image className="d-inline mr-2 reid-random" src={Reid} />
             <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
             <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4">
-          <button className="btn btn-warning" size="lg">
+          <button className="d-block btn btn-warning" size="lg">
             <Image className="d-inline mr-2 reid-random" src={Reid} />
             <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
             <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4">
-          <button className="btn btn-warning" size="lg">
+          <button className="d-block btn btn-warning" size="lg">
             <Image className="d-inline mr-2 reid-random" src={Reid} />
             <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
             <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4-5">
-          <button className="btn btn-warning" size="lg">
+          <button className="d-block btn btn-warning" size="lg">
             <Image className="d-inline mr-2 reid-random" src={Reid} />
             <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
             <p className="d-block user-name-random ml-5">@ReidMuchow</p>
