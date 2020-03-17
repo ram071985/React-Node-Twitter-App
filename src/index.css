@@ -84,38 +84,38 @@ opacity: 0.8;
     color: black;
 }
 
-.button-one {
-  background-color: white ;
+.btn-default {
+  background: white !important;
   width: 250px;
-  height: 70px;
+  height: 75px;
   margin: 25px;
 }
 
 .button-two {
     background-color: white ;
     width: 250px;
-    height: 70px;
+    height: 75px;
     margin: 25px;
   }
 
 .button-three {
     background-color: white ;
     width: 250px;
-    height: 70px;
+    height: 75px;
     margin: 25px;
   }
 
 .button-four {
     background-color: white ;
     width: 250px;
-    height: 70px;
+    height: 75px;
     margin: 25px;
   }
 
   .button-five {
     background-color: white ;
     width: 250px;
-    height: 70px;
+    height: 75px;
     margin: 25px;
   }
 
@@ -127,6 +127,19 @@ div.col-4-4.col {
      color: black;
     }
 
+.real-random-one {
+    position: absolute !important;
+    left: 20px
+}
+
+.user-name-random {
+    position: absolute;
+    left: 145px;
+    top: 69px;
+    margin: 0 auto !important;
+    color: grey;
+    
+}
 
 
 .choose-text {

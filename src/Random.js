@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import "./index.css";
 import Reid from "./images/reid.png";
 import ReTweet from "./images/retweet-action.png";
@@ -17,28 +17,38 @@ class Random extends Component {
         </Row>
         <Row>
           <Col className=" column-one">
-            <button className="button-one" size="lg">
-              Large button
+            <button className="btn btn-default" size="lg">
+            <Image className="d-inline mr-2 reid-random" src={Reid} />
+            <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
+            <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="column-two">
-            <button className="button-two" size="lg">
-              Large button
+          <button className="btn btn-default" size="lg">
+            <Image className="d-inline mr-2 reid-random" src={Reid} />
+            <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
+            <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4-3">
-            <button className="button-three" size="lg">
-              Large button
+          <button className="btn btn-default" size="lg">
+            <Image className="d-inline mr-2 reid-random" src={Reid} />
+            <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
+            <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4-4">
-            <button className="button-four" size="lg">
-              Large button
+          <button className="btn btn-default" size="lg">
+            <Image className="d-inline mr-2 reid-random" src={Reid} />
+            <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
+            <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
           <Col className="col-4-5">
-            <button className="button-five" size="lg">
-              Large button
+          <button className="btn btn-default" size="lg">
+            <Image className="d-inline mr-2 reid-random" src={Reid} />
+            <h6 className="d-inline real-name-random-one text-left"><strong>Reid Muchow</strong></h6>
+            <p className="d-block user-name-random ml-5">@ReidMuchow</p>
             </button>
           </Col>
         </Row>
