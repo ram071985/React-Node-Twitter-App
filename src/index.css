@@ -164,8 +164,26 @@ width: 290px !important;
      margin-right: 0 !important;
      margin-top: 10px !important;
    }
+   
 }
 
+@media screen and (max-width: 500px) {
+   .tweet-row {
+       height: 350px;
+       width: 350px;
+       margin: 10px;
+   }
+   .tweet-col {
+       padding: 0;
+   }
+   .container {
+       padding: 0;
+   }
+   .choose-text {
+       font-size: 1.3rem;
+       padding: 0 20px;
+   }
+}
 
 
 

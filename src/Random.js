@@ -59,7 +59,7 @@ class Random extends Component {
       
 
         <Row className="tweet-row">
-              <Col>
+              <Col className="tweet-col">
               <Image className="d-inline mt-1 mr-1 ml-1" src={Reid} />
               <h6 className="d-inline real-name ml-1 mt-1"><strong>Reid Muchow</strong></h6>
               <p className="d-inline ml-2 user-handle">@ReidMuchow</p>
