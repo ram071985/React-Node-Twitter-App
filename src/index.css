@@ -84,11 +84,11 @@ opacity: 0.8;
     color: black;
 }
 
-.btn-default {
-  background: white !important;
+.btn-warning {
+  background: rgb(255, 218, 149) !important;
   width: 250px;
   height: 75px;
-  margin: 25px;
+  margin: 5px;
 }
 
 .button-two {
@@ -134,8 +134,8 @@ div.col-4-4.col {
 
 .user-name-random {
     position: absolute;
-    left: 145px;
-    top: 69px;
+    left: 124px;
+    top: 47px;
     margin: 0 auto !important;
     color: grey;
     
