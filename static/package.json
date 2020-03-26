@@ -38,5 +38,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": ". See my deployed version on Heroku - [HERE]() or open-source here at my remote repostiory [Github](https://github.com/ram071985/twitter-app)",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ram071985/twitter-app.git"
+  },
+  "keywords": [
+    "twitter",
+    "search",
+    "api"
+  ],
+  "author": "Reid Muchow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ram071985/twitter-app/issues"
+  },
+  "homepage": "https://github.com/ram071985/twitter-app#readme"
 }
