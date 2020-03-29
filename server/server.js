@@ -5,6 +5,6 @@ const path = require('path');
 
 
 
-app.get('/', (req, res) => res.sendFile(path.resolve('client', 'build', 'index.html')));
+app.use('/', (path.join(__dirname, client/build)));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
