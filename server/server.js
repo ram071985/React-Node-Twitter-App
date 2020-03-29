@@ -4,6 +4,6 @@ const port = 3000
 
 
 
-app.get('/client/build', (req, res) => res.send('index.html'));
+app.get('/', (req, res) => res.send('Hello World!'));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
