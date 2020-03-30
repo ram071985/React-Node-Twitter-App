@@ -5,8 +5,15 @@ import './index.css';
 import Reid from "./images/reid.png";
 import ReTweet from "./images/retweet-action.png"
 import Like from "./images/like-action.png"
+import axios from "axios";
 
 class Search extends Component {
+
+async componentDidMount() {
+  const twitterResponse = await axios.get('https://api.twitter.com/1.1/search/tweets.json')
+  console.log(twitterResponse);
+};
+
   render() {
     return (
         <Container>
