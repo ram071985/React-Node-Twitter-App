@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
-
+import axios from "axios";
 
 app.use("/", express.static(path.join(__dirname, "../client/build")));
 app.use((req, res) => {

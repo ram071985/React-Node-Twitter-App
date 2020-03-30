@@ -5,7 +5,6 @@ import './index.css';
 import Reid from "./images/reid.png";
 import ReTweet from "./images/retweet-action.png"
 import Like from "./images/like-action.png"
-import axios from "axios";
 
 class Search extends Component {
 
