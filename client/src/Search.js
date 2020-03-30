@@ -9,11 +9,6 @@ import axios from "axios";
 
 class Search extends Component {
 
-async componentDidMount() {
-  const twitterResponse = await axios.get('https://api.twitter.com/1.1/search/tweets.json')
-  console.log(twitterResponse);
-};
-
   render() {
     return (
         <Container>
