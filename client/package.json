@@ -37,9 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "cra-build-watch": "^3.2.0",
-    "nodemon": "^2.0.2"
   }
 }
