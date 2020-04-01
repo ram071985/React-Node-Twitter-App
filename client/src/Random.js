@@ -8,9 +8,18 @@ import Like from "./images/like-action.png";
 import axios from "axios";
 
 class Random extends Component {
+    constructor() {
+      super();
+      this.state = {
+        eckhart: [],
+        dalai: []
+        
+      }
+    }
+
    getEckhartTolle = () => {
     axios.get('api/tweet/random').then(res => {
-      
+      //update the state with the tweet that came back
     });
    }
   

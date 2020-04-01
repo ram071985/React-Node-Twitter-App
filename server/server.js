@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
-app.get("/api/twitter", (req, res) => {
-  res.send(twitter);
+app.get("/api/tweet/random", (req, res) => {
+  //send back a random tweet
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
