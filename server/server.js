@@ -10,10 +10,17 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
-app.get("api/tweet/random", (req, res) => {
+app.get("/api/tweet/random", (req, res) => {
   res.send('https://api.twitter.com/1.1/search/tweets.json?screen-name=ericandre')//send back a random tweet
   console.log(res.data)
 });
+
+axios.get('https://api.twitter.com/1.1/search/tweets.json?screen-name=ericandre').then((twitterRes, error) => {
+    // when the response comes back send the twitter data back
+    res.send(twitterRes.data);
+  }).catch(err => {
+    res.send(err);
+  })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
