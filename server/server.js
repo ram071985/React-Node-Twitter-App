@@ -11,7 +11,8 @@ app.get('/', (req, res) => {
 });
 
 app.get("/api/tweet/random", (req, res) => {
-  //send back a random tweet
+  res.send('https://api.twitter.com/1.1/search/tweets.json?screen-name=ericandre')//send back a random tweet
+  console.log(res.data)
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
