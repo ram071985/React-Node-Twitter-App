@@ -12,17 +12,14 @@ app.get('/', (req, res) => {
 
 app.get("/api/tweet/random", (req, res) => {
   axios.get('https://api.twitter.com/1.1/search/tweets.json?screen-name=ericandre').then((twitterRes, error) => {
-    // when the response comes back send the twitter data back
-    res.send(twitterRes.data);
-   
-  }).catch(err => {
-    res.send(err);
-  })
+     headers: {
+       'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV' }
+     }
+  });
+
+  
 });
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-const twitter = {
-  name: "Eric Andre"
-};
