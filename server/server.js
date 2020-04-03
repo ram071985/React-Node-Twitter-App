@@ -17,12 +17,8 @@ config = () => {
 }
 app.get("/api/tweet/random", (req, res) => {
   //send back a random tweet
-  axios.get('https://api.twitter.com/1.1/search/tweets.json?q=ericandre', config
-  )
-  .then(res => (res)) 
-  .catch(err => console.error(err));
-
-  
+  const result = axios.get('https://api.twitter.com/1.1/search/tweets.json?q=ericandre', config);
+  res.send(result);
 });
 
 

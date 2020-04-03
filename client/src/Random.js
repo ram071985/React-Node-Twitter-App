@@ -17,7 +17,8 @@ class Random extends Component {
   }
 
   getEckhartTolle = () => {
-    axios.get("/api/tweet/random").then(res => {
+    axios.get("/api/tweet/random")
+    .then(res => {
       //update state with the tweet that came back
       console.log(res.data);
     });
