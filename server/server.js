@@ -16,9 +16,10 @@ config = () => {
   }
 }
 app.get("/api/tweet/random", (req, res) => {
-  axios.get('https://api.twitter.com/1.1/search/tweets.json', config
+  //send back a random tweet
+  axios.get('https://api.twitter.com/1.1/search/tweets.json?q=ericandre', config
   )
-  .then(res => console.log(res)) 
+  .then(res => (res)) 
   .catch(err => console.error(err));
 
   
