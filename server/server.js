@@ -16,7 +16,7 @@ config = () => {
   }
 }
 app.get("/api/tweet/random", (req, res) => {
-  axios.get('https://api.twitter.com/1.1/search/tweets.json?screen-name=ericandre', config
+  axios.get('https://api.twitter.com/1.1/search/tweets.json', config
   )
   .then(res => console.log(res)) 
   .catch(err => console.error(err));
