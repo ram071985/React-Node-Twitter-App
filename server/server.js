@@ -21,7 +21,7 @@ app.get("/api/tweet/random", (req, res) => {
     .get("https://api.twitter.com/1.1/lists/memberships.json?screen_name=ericandre", config)
     .then(twitterResponse => {
   
-      res.send(twitterResponse);
+      res.send(res);
     })
     .catch(err => {
       console.log(err);
