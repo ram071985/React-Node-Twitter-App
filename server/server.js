@@ -18,14 +18,19 @@ app.get("/api/tweet/random", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/lists/memberships.json?screen_name=ericandre", config)
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=eckharttolle&result_type=popular&count=12", config)
     .then(twitterResponse => {
   
-      res.send(res);
+      res.send(twitterResponse.data);
     })
     .catch(err => {
-      console.log(err);
+      res.status(500).send(err);
     });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+// data returning endpoint
+// send http request to my endpoint 
+//get the data back and console it
+// display data in ui
+//display data in ui and in table /etc.

@@ -20,7 +20,7 @@ class Random extends Component {
     axios.get("/api/tweet/random")
     .then(res => {
       //update state with the tweet that came back
-      console.log(res.data);
+      console.log(res.data.statuses[0].text);
     });
   };
 
