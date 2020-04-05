@@ -11,7 +11,7 @@ class Random extends Component {
   constructor() {
     super();
     this.state = {
-      eckhart: [],
+      user: [],
       dalai: []
     };
   }
@@ -20,13 +20,15 @@ class Random extends Component {
     axios.get("/api/tweet/random")
     .then(res => {
       this.setState({
-        eckhart: res.data.statuses
+        user: res.data.statuses
       });
-      console.log(this.state.eckhart);
+      console.log(this.state.user);
     });
   };
 
   render() {
+
+    const tweetRows
     return (
       <Container className="container-random">
         <Row>
