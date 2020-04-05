@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
-app.get("/api/tweet/random", (req, res) => {
+app.get("/api/tweet/random/eckhart", (req, res) => {
   const config = {
     headers: {
       Authorization:
@@ -18,7 +18,7 @@ app.get("/api/tweet/random", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=eckharttolle&result_type=popular&count=12", config)
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=eckharttolle&result_type=popular&count=10", config)
     .then(twitterResponse => {
   
       res.send(twitterResponse.data);

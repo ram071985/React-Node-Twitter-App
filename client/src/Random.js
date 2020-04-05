@@ -17,7 +17,7 @@ class Random extends Component {
   }
 
   getEckhartTolle = () => {
-    axios.get("/api/tweet/random")
+    axios.get("/api/tweet/random/eckhart")
     .then(res => {
       this.setState({
         user: res.data.statuses
