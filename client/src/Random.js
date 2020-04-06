@@ -20,8 +20,10 @@ class Random extends Component {
     .then(res => {
       this.setState({
         user: res.data.statuses
-      });
+      },
+      function() {
       console.log(this.state.user);
+      });
     });
   };
 
