@@ -42,6 +42,10 @@ opacity: 0.8;
     color: grey;
 }
 
+.tweet-col.col {
+    height: 100% !important;
+}
+
 .tweet-text {
     color: black;
     margin-left: 65px;
