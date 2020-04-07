@@ -12,7 +12,17 @@ body {
     margin-top: 100px;
     padding: 0 20px;
     width: 100%;
+    height: 100%;
 } 
+
+.container > .tweet-card {
+    margin-top: 20px !important;
+}
+
+
+.card-row img {
+    border-radius: 50% !important;
+}
   
 .twitter-logo {
  width: 180px;
@@ -29,11 +39,6 @@ opacity: 0.8;
     width: 90%;
 }
 
-.tweet-row {
-    height: 210px;
-    background-color: white;
-}
-
 .real-name {
     color: black;
 }
@@ -42,8 +47,18 @@ opacity: 0.8;
     color: grey;
 }
 
-.tweet-col.col {
+.tweet-row {
+  height: 100% !important;
+
+}
+
+.tweet-col {
     height: 100% !important;
+    background-color: white !important;
+}
+
+.tweet-col.col img {
+    border-radius: 50% !important;
 }
 
 .tweet-text {
@@ -53,32 +68,36 @@ opacity: 0.8;
     left: 16px !important;
     position: absolute;
     padding-right: 50px;
+    padding-bottom: 7px !important;
 }
 
-.retweet-image {
+.tweet-col.retweet-image {
     position: absolute;
     margin-left: 65px;
-    bottom: 10px;
+    top: 200px;
+    margin-right: 0px !important;
+    padding: 10px 0;
 }
 
-.retweet-num {
-    color: grey;
+.tweet-col.col.retweet-num {
+    color: grey !important;
     position: absolute;
-    Margin: 0 0 0 100px;
+    margin: 0 0 0 100px;
     bottom: 10px;
 }
 
-.like-image {
+.tweet-col.like-image {
     position: absolute;
     bottom: 8px;
     left: 230px;
+    padding: 10px 0;
 }
 
 
-.like-num {
+.tweet-col.col.like-num {
     color: grey;
     position: absolute;
-    Margin: 0 0 0 250px;
+    margin: 0 0 0 250px;
     bottom: 10px;
 }
 
