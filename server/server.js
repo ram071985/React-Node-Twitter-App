@@ -18,7 +18,7 @@ app.get("/api/tweet/random/eckhart", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=eckharttolle&screen_name=ekharttolle&result_type=popular&lang=en&tweet_mode=extended&count=10", config)
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=from%3AEckhartTolle&count=10&result_type=recent&lang=en&tweet_mode=extended", config)
     .then(twitterResponse => {
   
       res.send(twitterResponse.data);
@@ -35,7 +35,7 @@ app.get("/api/tweet/random/questlove", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=questlove&result_type=popular&screen_name=questlove&lang=en&tweet_mode=extended&count=10", config)
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=from%3Aquestlove&count=10&result_type=recent&lang=en&tweet_mode=extended", config)
     .then(twitterResponse => {
   
       res.send(twitterResponse.data);
@@ -52,7 +52,7 @@ app.get("/api/tweet/random/yuval", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=@harari_yuval&result_type=popular&lang=en&tweet_mode=extended&count=10", config)
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=from%3Aharari_yuval&count=10&result_type=recent&lang=en&tweet_mode=extended", config)
     .then(twitterResponse => {
   
       res.send(twitterResponse.data);

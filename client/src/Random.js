@@ -4,6 +4,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import "./index.css";
 import Eckhart from "./images/AUcTAQC7_normal.jpg";
 import Questlove from "./images/QIV6c_-D_normal.jpg";
+import Yuval from "./images/9GqAdkNk_normal.jpg"
 import ReTweet from "./images/retweet-action.png";
 import Like from "./images/like-action.png";
 import axios from "axios";
@@ -105,7 +106,7 @@ class Random extends Component {
       </Col>
       <Col className="col-4">
         <button className="d-block btn btn-warning" onClick={this.getYuval} size="lg">
-          <Image className="d-inline mr-2 reid-random" src={Eckhart} />
+          <Image className="d-inline mr-2 reid-random" src={Yuval} />
           <h6 className="d-inline real-name-random-one text-left">
             <strong>Yuval Noah Harari</strong>
           </h6>
