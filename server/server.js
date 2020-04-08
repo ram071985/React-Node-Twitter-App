@@ -61,6 +61,22 @@ app.get("/api/tweet/random/yuval", (req, res) => {
       res.status(500).send(err);
     });
 });
+app.get("/api/tweet/random/user", (req, res) => {
+  const config = {
+    headers: {
+      Authorization:
+        "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
+    }
+  };
+  axios
+    .get("https://api.twitter.com/1.1/search/tweets.json", config)
+    .then(twitterResponse => {
+      res.send(twitterResponse.data);
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    });
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 // data returning endpoint

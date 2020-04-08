@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import './index.css';
 import ReTweet from "./images/retweet-action.png"
 import Like from "./images/like-action.png"
+import axios from "axios";
 
 class Search extends Component {
 
@@ -19,6 +20,32 @@ class Search extends Component {
     const { name, value } = event.target;
   this.setState({ [name]: value} );
  console.log(this.state.entry);
+  };
+
+  getUserHandle = () => {
+    axios.get("/api/tweet/random/user", { 
+       params: { q: eckharttolle }
+    })
+    .then(res => {
+      this.setState({
+        user: res.data.statuses
+      },
+      function() {
+      console.log(this.state.user);
+      });
+    });
+  };
+
+  getTopic = () => {
+    axios.get("/api/tweet/random/topic")
+    .then(res => {
+      this.setState({
+        user: res.data.statuses
+      },
+      function() {
+      console.log(this.state.user);
+      });
+    });
   };
 
   render() {
@@ -49,8 +76,8 @@ class Search extends Component {
                 <Form.Group>
                 <Form.Control className="control-form" type="input" value={this.state.entry} name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
                 </Form.Group>
-                <Button as="input" type="button" value="Search By User Handle" />
-                <Button className="d-inline ml-5 topic-button" as="input" type="button" value="Search By Topic" />
+                <Button as="input" type="button" onClick={this.getUserHandle} value="Search By User Handle" />
+                <Button className="d-inline ml-5 topic-button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
                 </Col>
             </Row>
             <br />
