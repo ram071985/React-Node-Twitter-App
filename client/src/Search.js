@@ -24,7 +24,7 @@ class Search extends Component {
 
   getUserHandle = () => {
     axios.get("/api/tweet/random/user", { 
-       params: { q: eckharttolle }
+       params: { q: "eckharttolle" }
     })
     .then(res => {
       this.setState({

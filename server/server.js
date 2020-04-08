@@ -71,7 +71,7 @@ app.get("/api/tweet/random/user", (req, res) => {
   axios
     .get("https://api.twitter.com/1.1/search/tweets.json", config)
     .then(twitterResponse => {
-      res.send(twitterResponse.data);
+      res.send(twitterResponse.data, { qs: req.query });
     })
     .catch(err => {
       res.status(500).send(err);
