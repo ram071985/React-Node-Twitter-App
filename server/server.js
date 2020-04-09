@@ -18,7 +18,7 @@ app.get("/api/tweet/random/eckhart", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=from%3AEckhartTolle&count=10&result_type=recent&lang=en&tweet_mode=extended", config)
+    .get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=eckharttolle&tweet_mode=extended", config)
     .then(twitterResponse => {
   
       res.send(twitterResponse.data);
@@ -69,9 +69,9 @@ app.get("/api/tweet/random/user", (req, res) => {
     }
   };
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json", config)
+    .get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + req.query.screenname, config)
     .then(twitterResponse => {
-      res.send(twitterResponse.data, { qs: req.query });
+      res.send(twitterResponse.data);
     })
     .catch(err => {
       res.status(500).send(err);

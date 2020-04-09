@@ -24,14 +24,14 @@ class Search extends Component {
 
   getUserHandle = () => {
     axios.get("/api/tweet/random/user", { 
-       params: { q: "eckharttolle" }
+       params: { screenname: this.state.entry, count: 10},
     })
     .then(res => {
       this.setState({
-        user: res.data.statuses
+        query: res.data
       },
       function() {
-      console.log(this.state.user);
+      console.log(this.state.query);
       });
     });
   };
@@ -58,7 +58,7 @@ class Search extends Component {
           <strong>{users.user.name}</strong>
         </h6>
         <p className="d-inline ml-2 user-handle">@{users.user.screen_name}</p>
-        <p className="d-block tweet-text">{users.full_text}</p>
+        <p className="d-block tweet-text">{users.text}</p>
         <Image className="d-block retweet-image" src={ReTweet} />
         <p className="retweet-num">{users.retweet_count}</p>
         <Image className="d-block like-image" src={Like} />
@@ -74,10 +74,10 @@ class Search extends Component {
             <Row>
                 <Col>
                 <Form.Group>
-                <Form.Control className="control-form" type="input" value={this.state.entry} name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
+                <Form.Control className="control-form" type="input" name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
                 </Form.Group>
-                <Button as="input" type="button" onClick={this.getUserHandle} value="Search By User Handle" />
-                <Button className="d-inline ml-5 topic-button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
+                <Button as="input" type="button" onClick={this.getUserHandle} placeholder="Search By User Handle" />
+                <Button className="d-inline ml-5 topic-button" as="input" onClick={this.getTopic} type="button" placeholder="Search By Topic" />
                 </Col>
             </Row>
             <br />
