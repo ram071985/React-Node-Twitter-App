@@ -14,11 +14,18 @@ class Random extends Component {
     super();
     this.state = {
       user: []
+
     };
   }
 
   getEckhartTolle = () => {
-    axios.get("/api/tweet/random/eckhart")
+    axios.get("/api/tweet/random", {
+      params: {
+        favorite: "eckharttolle"
+      }
+    }
+    
+    )
     .then(res => {
       this.setState({
         user: res.data
@@ -30,10 +37,15 @@ class Random extends Component {
   };
 
   getQuestlove = () => {
-    axios.get("/api/tweet/random/questlove")
+    axios.get("/api/tweet/random", {
+      params: {
+        favorite: "questlove"
+      }
+    }
+    )
     .then(res => {
       this.setState({
-        user: res.data.statuses
+        user: res.data
       },
       function() {
       console.log(this.state.user);
@@ -42,10 +54,16 @@ class Random extends Component {
   };
 
   getYuval = () => {
-    axios.get("/api/tweet/random/yuval")
+    axios.get("/api/tweet/random", {
+      params: {
+        favorite: "harari_yuval"
+      }
+    }
+
+    )
     .then(res => {
       this.setState({
-        user: res.data.statuses
+        user: res.data
       },
       function() {
       console.log(this.state.user);

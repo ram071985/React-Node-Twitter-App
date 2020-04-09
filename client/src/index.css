@@ -53,7 +53,7 @@ opacity: 0.8;
 }
 
 .tweet-col {
-    height: 100% !important;
+  
     background-color: white !important;
 }
 
@@ -64,44 +64,40 @@ opacity: 0.8;
 .tweet-text {
     color: black;
     margin-left: 65px;
-    top: 41px !important;
-    left: 16px !important;
-    position: absolute;
-    padding-right: 50px;
-    padding-bottom: 7px !important;
+   text-align: left;
+    padding-right: 200px;
+    padding-bottom: 60px !important;
 }
 
-.tweet-col.retweet-image {
+.retweet-image {
     position: absolute;
-    margin-left: 65px;
-    top: 200px;
-    margin-right: 0px !important;
-    padding: 10px 0;
-}
-
-.tweet-col.col.retweet-num {
-    color: grey !important;
-    position: absolute;
-    margin: 0 0 0 100px;
-    bottom: 10px;
-}
-
-.tweet-col.like-image {
-    position: absolute;
+    left: 80px;
     bottom: 8px;
-    left: 230px;
-    padding: 10px 0;
+   padding: 0px 20px !important;  
 }
 
-
-.tweet-col.col.like-num {
-    color: grey;
+.like-image {
+    margin: 15px 0px 0px 0px;
+    left: 220px;
     position: absolute;
-    margin: 0 0 0 250px;
-    bottom: 10px;
+    bottom: 5px;
 }
 
+.retweet-num {
+    margin-bottom: 0;
+    position: absolute;
+    left: 130px;
+    bottom: 8px;
+color: black;
+}
 
+.like-num {
+    margin-bottom: 0;
+    left: 248px;
+    bottom: 8px;
+    position: absolute;
+    color: black;
+}
 
 .favorite-name {
     color: black;
@@ -164,7 +160,6 @@ div.col-4-4.col {
     
 }
 
-
 .choose-text {
   color: black;
 
@@ -173,6 +168,16 @@ div.col-4-4.col {
 .column-four.col {
 width: 290px !important;
 }
+
+.handle-button, .topic-button {
+    color: white !important;
+}
+
+@media (min-width: 776px) {
+   .handle-button.btn.btn-primary {
+       margin-right: 25px !important;
+   }
+  }
 
 @media screen and (max-width: 995px) {
     .card-row {
@@ -191,13 +196,19 @@ width: 290px !important;
 }
 
 @media screen and (max-width: 500px) {
+    .form-group {
+        margin: 20px 20px 20px 20px !important;
+    }
    .tweet-row {
        height: 350px;
        width: 350px;
        margin: 10px;
    }
+   .tweet-text {
+    padding-right: 35px !important;
+}
    .tweet-col {
-       padding: 0;
+       padding: 0px 0px 0px 0px !important;
    }
    .container {
        padding: 0;
@@ -206,6 +217,16 @@ width: 290px !important;
        font-size: 1.3rem;
        padding: 0 20px;
    }
+
+  .btn {
+      margin-left: 70px;
+      }
+
+.topic-button.btn.btn-primary {
+        margin-left: 70px !important;
+        }
+  
+ 
 }
 
 

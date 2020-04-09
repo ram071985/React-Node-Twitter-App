@@ -23,15 +23,15 @@ class Search extends Component {
   };
 
   getUserHandle = () => {
-    axios.get("/api/tweet/random/user", { 
-       params: { screenname: this.state.entry, count: 10},
+    axios.get("/api/tweet/user", { 
+       params: { screenname: this.state.entry},
     })
     .then(res => {
       this.setState({
         query: res.data
       },
       function() {
-      console.log(this.state.query);
+      console.log(this.state.query[0]);
       });
     });
   };
@@ -43,7 +43,7 @@ class Search extends Component {
         user: res.data.statuses
       },
       function() {
-      console.log(this.state.user);
+      console.log();
       });
     });
   };
@@ -58,11 +58,11 @@ class Search extends Component {
           <strong>{users.user.name}</strong>
         </h6>
         <p className="d-inline ml-2 user-handle">@{users.user.screen_name}</p>
-        <p className="d-block tweet-text">{users.text}</p>
-        <Image className="d-block retweet-image" src={ReTweet} />
-        <p className="retweet-num">{users.retweet_count}</p>
-        <Image className="d-block like-image" src={Like} />
-        <p className="like-num">{users.favorite_count}</p>
+        <p className="d-block tweet-text">{users.full_text}</p>
+        <Image className="d-inline retweet-image" src={ReTweet} />
+        <p className="d-inline retweet-num">{users.retweet_count}</p>
+        <Image className="d-inline like-image" src={Like} />
+        <p className="d-inline like-num">{users.favorite_count}</p>
       </Col>
       </Row>
       </Container>
@@ -76,8 +76,8 @@ class Search extends Component {
                 <Form.Group>
                 <Form.Control className="control-form" type="input" name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
                 </Form.Group>
-                <Button as="input" type="button" onClick={this.getUserHandle} placeholder="Search By User Handle" />
-                <Button className="d-inline ml-5 topic-button" as="input" onClick={this.getTopic} type="button" placeholder="Search By Topic" />
+                <Button as="input" type="button" className="handle-button" onClick={this.getUserHandle} value="Search By User Handle" />
+                <Button className="topic-button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
                 </Col>
             </Row>
             <br />
