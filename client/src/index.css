@@ -1,3 +1,4 @@
+
 body {
     background-color: rgb(255, 202, 123);
     
@@ -12,7 +13,25 @@ body {
     margin-top: 100px;
     padding: 0 20px;
     width: 100%;
+    height: 100%;
 } 
+
+.col-4 {
+    margin: 10px 50px;
+}
+
+.btn img {
+    border-radius: 50%;
+}
+
+.container > .tweet-card {
+    margin-top: 20px !important;
+}
+
+
+.card-row img {
+    border-radius: 50% !important;
+}
   
 .twitter-logo {
  width: 180px;
@@ -29,11 +48,6 @@ opacity: 0.8;
     width: 90%;
 }
 
-.tweet-row {
-    height: 210px;
-    background-color: white;
-}
-
 .real-name {
     color: black;
 }
@@ -42,43 +56,57 @@ opacity: 0.8;
     color: grey;
 }
 
+.tweet-row {
+  height: 100% !important;
+
+}
+
+.tweet-col {
+  
+    background-color: white !important;
+}
+
+.tweet-col.col img {
+    border-radius: 50% !important;
+}
+
 .tweet-text {
     color: black;
     margin-left: 65px;
-    top: 41px !important;
-    left: 16px !important;
-    position: absolute;
-    padding-right: 50px;
+   text-align: left;
+    padding-right: 80px;
+    padding-bottom: 60px !important;
 }
 
 .retweet-image {
     position: absolute;
-    margin-left: 65px;
-    bottom: 10px;
-}
-
-.retweet-num {
-    color: grey;
-    position: absolute;
-    Margin: 0 0 0 100px;
-    bottom: 10px;
+    left: 80px;
+    bottom: 8px;
+   padding: 0px 20px !important;  
 }
 
 .like-image {
+    margin: 15px 0px 0px 0px;
+    left: 220px;
     position: absolute;
-    bottom: 8px;
-    left: 230px;
+    bottom: 5px;
 }
 
+.retweet-num {
+    margin-bottom: 0;
+    position: absolute;
+    left: 130px;
+    bottom: 8px;
+    color: black;
+}
 
 .like-num {
-    color: grey;
+    margin-bottom: 0;
+    left: 248px;
+    bottom: 8px;
     position: absolute;
-    Margin: 0 0 0 250px;
-    bottom: 10px;
+    color: black;
 }
-
-
 
 .favorite-name {
     color: black;
@@ -141,7 +169,6 @@ div.col-4-4.col {
     
 }
 
-
 .choose-text {
   color: black;
 
@@ -151,9 +178,23 @@ div.col-4-4.col {
 width: 290px !important;
 }
 
+.handle-button, .topic-button {
+    color: white !important;
+}
+
+@media (min-width: 776px) {
+   .handle-button.btn.btn-primary {
+       margin-right: 25px !important;
+   }
+
+  }
+
 @media screen and (max-width: 995px) {
     .card-row {
         display: block !important;
+    }
+    .col-4 {
+        margin: 10px 10px !important;
     }
 }
 
@@ -164,30 +205,80 @@ width: 290px !important;
      margin-right: 0 !important;
      margin-top: 10px !important;
    }
+
+   .col-4 {
+    margin: 10px 10px !important;
+}
+
    
 }
 
 @media screen and (max-width: 500px) {
+    .form-group {
+        margin: 20px 20px 20px 40px !important;
+    }
    .tweet-row {
        height: 350px;
        width: 350px;
        margin: 10px;
    }
+   .tweet-text {
+    padding-right: 20px !important;
+}
    .tweet-col {
-       padding: 0;
+       padding: 0px 0px 0px 0px !important;
    }
    .container {
        padding: 0;
    }
    .choose-text {
        font-size: 1.3rem;
-       padding: 0 20px;
+       padding: 0 50px;
    }
+
+  .btn {
+      margin-left: 85px;
+      }
+
+.topic-button.btn.btn-primary {
+        margin-left: 85px !important;
+        }
+  .col {
+      padding: 0px 0px;
+  }
+
+  .btn.btn-warning {
+     width: 140px !important;
+     margin-left: 10px !important;
+  }
+
+  .d-inline.real-name.ml-1.mt-1 {
+      font-size: .9rem !important;
+  }
+
+  .d-inline.ml-2.user-handle {
+      font-size: .9rem !important;
+  }
+
+  .welcome-splash {
+      font-size: 2.4rem;
+      padding: 0px 30px;
+  }
+  .d-block.describe {
+      padding: 0px 20px;
+  }
+
+
+  
+  .col-4 {
+      margin: 10px 10px !important;
+  }
+
+  .text-left {
+      font-size: .8rem !important;
+  }
+
 }
-
-
-
-
 
 
 

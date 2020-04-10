@@ -2,19 +2,78 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import './index.css';
-import Reid from "./images/reid.png";
 import ReTweet from "./images/retweet-action.png"
 import Like from "./images/like-action.png"
 import axios from "axios";
+import moment from "moment";
 
 class Search extends Component {
 
-async componentDidMount() {
-  const twitterResponse = await axios.get('https://api.twitter.com/1.1/search/tweets.json')
-  console.log(twitterResponse);
-};
+  constructor() {
+    super();
+    this.state = {
+      query: [],
+      entry: ""
+    };
+  }
+
+
+  
+  handleChange = event => {
+    const { name, value } = event.target;
+  this.setState({ [name]: value} );
+ console.log(this.state.entry);
+  };
+
+  getUserHandle = () => {
+    axios.get("/api/tweet/user", { 
+       params: { screenname: this.state.entry},
+    })
+    .then(res => {
+      this.setState({
+        query: res.data
+      },
+      function() {
+      console.log(this.state.query[0].created_at);
+      });
+    });
+  };
+
+  getTopic = () => {
+    axios.get("/api/tweet/topic", {
+      params: { topicname: this.state.entry }
+    }
+    )
+    .then(res => {
+      this.setState({
+        query: res.data.statuses
+      },
+      function() {
+      console.log();
+      });
+    });
+  };
 
   render() {
+    const tweetRows = this.state.query.map(users => (
+      <Container className="tweet-card">
+      <Row className="d-block tweet-row">
+      <Col className="tweet-col">
+        <Image className="d-inline mt-2 mr-1 ml-1" src={users.user.profile_image_url} />
+        <h6 className="d-inline real-name ml-1 mt-1">
+          <strong>{users.user.name}</strong>
+        </h6>
+        <p className="d-inline ml-2 user-handle">@{users.user.screen_name}</p>
+        <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD").toString()}</p>
+        <p className="d-block tweet-text">{users.full_text}</p>
+        <Image className="d-inline retweet-image" src={ReTweet} />
+        <p className="d-inline retweet-num">{users.retweet_count}</p>
+        <Image className="d-inline like-image" src={Like} />
+        <p className="d-inline like-num">{users.favorite_count}</p>
+      </Col>
+      </Row>
+      </Container>
+    ));
     return (
         <Container>
           <br />
@@ -22,25 +81,14 @@ async componentDidMount() {
             <Row>
                 <Col>
                 <Form.Group>
-                <Form.Control className="control-form" type="input" placeholder="Search Twitter..." />
+                <Form.Control className="control-form" type="input" name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
                 </Form.Group>
-                <Button as="input" type="button" value="Search By User Handle" />
-                <Button className="d-inline ml-5 topic-button" as="input" type="button" value="Search By Topic" />
+                <Button as="input" type="button" className="handle-button" onClick={this.getUserHandle} value="Search By User Handle" />
+                <Button className="topic-button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
                 </Col>
             </Row>
             <br />
-            <Row className="tweet-row">
-              <Col>
-              <Image className="d-inline mt-1 mr-1 ml-1" src={Reid} />
-              <h6 className="d-inline real-name ml-1 mt-1"><strong>Reid Muchow</strong></h6>
-              <p className="d-inline ml-2 user-handle">@ReidMuchow</p>
-              <p className="d-block tweet-text">Hey all, I feel like I've been living under a rock.  It's been ages since I've been on twitter.</p>
-              <Image className="d-block retweet-image" src={ReTweet}/>
-              <p className="retweet-num">20</p>
-              <Image className="like-image" src={Like} />
-              <p className="like-num">15</p>
-              </Col>
-            </Row>
+             {tweetRows}
             <br />
         </Container>
     )
