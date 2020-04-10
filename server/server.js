@@ -55,6 +55,28 @@ app.get("/api/tweet/user", (req, res) => {
     });
 });
 
+app.get("/api/tweet/topic", (req, res) => {
+  const config = {
+    headers: {
+      Authorization:
+        "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
+    },
+    params: {
+      count: 10,
+      tweet_mode: "extended",
+      lang: "en"
+    }
+  };
+  axios
+    .get("https://api.twitter.com/1.1/search/tweets.json?q=" + req.query.topicname, config)
+    .then(twitterResponse => {
+      res.send(twitterResponse.data);
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    });
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 // data returning endpoint
 // send http request to my endpoint 

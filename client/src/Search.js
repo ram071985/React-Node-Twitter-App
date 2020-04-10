@@ -37,10 +37,13 @@ class Search extends Component {
   };
 
   getTopic = () => {
-    axios.get("/api/tweet/random/topic")
+    axios.get("/api/tweet/topic", {
+      params: { topicname: this.state.entry }
+    }
+    )
     .then(res => {
       this.setState({
-        user: res.data.statuses
+        query: res.data.statuses
       },
       function() {
       console.log();
