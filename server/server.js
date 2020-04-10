@@ -2,32 +2,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
-<<<<<<< HEAD
-import axios from "axios";
-=======
 const axios = require("axios");
->>>>>>> week-4
 
 app.use("/", express.static(path.join(__dirname, "../client/build")));
 
-<<<<<<< HEAD
-app.use("/", express.static(path.join(__dirname, "../client/build")));
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-class TwitterSearch extends Component {
-    async componentDidMount() {
-      const twitterResponse = await axios.get(
-        "https://api.twitter.com/1.1/search/tweets.json"
-      );
-      console.log(twitterResponse);
-    }
-  }
-  
-  export default TwitterSearch;
-=======
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
@@ -107,4 +85,3 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 //get the data back and console it
 // display data in ui
 //display data in ui and in table /etc.
->>>>>>> week-4
