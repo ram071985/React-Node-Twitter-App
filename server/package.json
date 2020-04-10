@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "twitter-app",
   "main": "server.js",
+  "engines": {
+    "node": "12.15.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm run watch --prefix ../client",
