@@ -5,6 +5,7 @@ import './index.css';
 import ReTweet from "./images/retweet-action.png"
 import Like from "./images/like-action.png"
 import axios from "axios";
+import moment from "moment";
 
 class Search extends Component {
 
@@ -16,6 +17,8 @@ class Search extends Component {
     };
   }
 
+
+  
   handleChange = event => {
     const { name, value } = event.target;
   this.setState({ [name]: value} );
@@ -31,7 +34,7 @@ class Search extends Component {
         query: res.data
       },
       function() {
-      console.log(this.state.query[0]);
+      console.log(this.state.query[0].created_at);
       });
     });
   };
@@ -61,6 +64,7 @@ class Search extends Component {
           <strong>{users.user.name}</strong>
         </h6>
         <p className="d-inline ml-2 user-handle">@{users.user.screen_name}</p>
+        <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD").toString()}</p>
         <p className="d-block tweet-text">{users.full_text}</p>
         <Image className="d-inline retweet-image" src={ReTweet} />
         <p className="d-inline retweet-num">{users.retweet_count}</p>

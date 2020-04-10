@@ -42,7 +42,8 @@ app.get("/api/tweet/user", (req, res) => {
     params: {
       count: 10,
       tweet_mode: "extended",
-      include_rts: true
+      include_rts: true,
+      result_type: "recent"
     }
   };
   axios
@@ -64,7 +65,8 @@ app.get("/api/tweet/topic", (req, res) => {
     params: {
       count: 10,
       tweet_mode: "extended",
-      lang: "en"
+      lang: "en",
+      result_type: "recent"
     }
   };
   axios

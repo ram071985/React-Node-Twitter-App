@@ -10,6 +10,7 @@ import Bob from "./images/FzX7v4zh_normal.jpg"
 import ReTweet from "./images/retweet-action.png";
 import Like from "./images/like-action.png";
 import axios from "axios";
+import moment from "moment"
 
 class Random extends Component {
   constructor() {
@@ -129,6 +130,7 @@ class Random extends Component {
             <p className="d-inline ml-2 user-handle">
               @{users.user.screen_name}
             </p>
+            <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD").toString()}</p>
             <p className="d-block tweet-text">{users.full_text}</p>
             <Image className="d-block retweet-image" src={ReTweet} />
             <p className="retweet-num">{users.retweet_count}</p>
@@ -150,7 +152,7 @@ class Random extends Component {
           </Col>
         </Row>
         <br />
-        <Row className="card-row">
+        <Row>
           <Col className="col-4">
             <button
               className="d-block btn btn-warning"
@@ -158,10 +160,9 @@ class Random extends Component {
               size="lg"
             >
               <Image className="d-inline mr-2 reid-random" src={Eckhart} />
-              <h6 className="d-inline real-name-random-one text-left">
+              <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Eckhart Tolle</strong>
               </h6>
-              <p className="d-block user-name-random ml-5">@EckhartTolle</p>
             </button>
           </Col>
           <Col className="col-4">
@@ -171,12 +172,13 @@ class Random extends Component {
               size="lg"
             >
               <Image className="d-inline mr-2 reid-random" src={Questlove} />
-              <h6 className="d-inline real-name-random-one text-left">
+              <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>?NG Shamen</strong>
               </h6>
-              <p className="d-block user-name-random ml-5">@questlove</p>
             </button>
           </Col>
+          </Row>
+          <Row>
           <Col className="col-4">
             <button
               className="d-block btn btn-warning"
@@ -184,10 +186,9 @@ class Random extends Component {
               size="lg"
             >
               <Image className="d-inline mr-2 reid-random" src={Yuval} />
-              <h6 className="d-inline real-name-random-one text-left">
+              <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Yuval Noah Harari</strong>
               </h6>
-              <p className="d-block user-name-random ml-5">@hurari_yuval</p>
             </button>
           </Col>
           <Col className="col-4">
@@ -197,23 +198,23 @@ class Random extends Component {
               size="lg"
             >
               <Image className="d-inline mr-2 reid-random" src={Stevie} />
-              <h6 className="d-inline real-name-random-one text-left">
+              <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Stevie Wonder</strong>
               </h6>
-              <p className="d-block user-name-random ml-5">@StevieWonder</p>
             </button>
           </Col>
-          <Col className="col-4-5">
+          </Row>
+          <Row>
+          <Col className="col-4">
             <button
               className="d-block btn btn-warning"
               onClick={this.getBob}
               size="lg"
             >
               <Image className="d-inline mr-2 reid-random" src={Bob} />
-              <h6 className="d-inline real-name-random-one text-left">
+              <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Bob Marley</strong>
               </h6>
-              <p className="d-block user-name-random ml-5">@bobmarley</p>
             </button>
           </Col>
         </Row>
