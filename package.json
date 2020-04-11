@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm run watch --prefix ../client",
-    "dev": "concurrently \"nodemon server.js\" \"npm run client\""
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
   },
   "keywords": [
     "twitter-app"
