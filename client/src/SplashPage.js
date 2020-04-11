@@ -9,11 +9,7 @@ function SplashPage() {
     <Container className="container" fluid>
       <Row>
         <Col className="d-inline mt-5 mb-5">
-<<<<<<< HEAD
         <h1>Welcome To Twitter Search Api</h1>
-=======
-        <h1 className="welcome-splash">Welcome To Twitter Search Api</h1>
->>>>>>> week-4
         <h6 className="d-block describe"><strong>Search</strong> for user and topic tweets or view a <strong>random</strong> tweet from one of my five favorite twitter users.</h6>
         <Image className="d-inline mt-3 mb-4 ml-5 twitter-logo" src={twitterContainer} />
         </Col>
