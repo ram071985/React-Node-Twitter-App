@@ -28,9 +28,13 @@ class Random extends Component {
         }
       })
       .then(res => {
+        const randNumber = Math.floor(Math.random() * res.data.length)
+        const randTweet = res.data[randNumber]
+        
+        console.log(randTweet);
         this.setState(
           {
-            user: res.data
+            user: [randTweet]
           },
           function() {
             console.log(this.state.user);
@@ -47,9 +51,13 @@ class Random extends Component {
         }
       })
       .then(res => {
+        const randNumber = Math.floor(Math.random() * res.data.length)
+        const randTweet = res.data[randNumber]
+        
+        console.log(randTweet);
         this.setState(
           {
-            user: res.data
+            user: [randTweet]
           },
           function() {
             console.log(this.state.user);
@@ -66,9 +74,13 @@ class Random extends Component {
         }
       })
       .then(res => {
+        const randNumber = Math.floor(Math.random() * res.data.length)
+        const randTweet = res.data[randNumber]
+        
+        console.log(randTweet);
         this.setState(
           {
-            user: res.data
+            user: [randTweet]
           },
           function() {
             console.log(this.state.user);
@@ -85,9 +97,13 @@ class Random extends Component {
         }
       })
       .then(res => {
+        const randNumber = Math.floor(Math.random() * res.data.length)
+        const randTweet = res.data[randNumber]
+        
+        console.log(randTweet);
         this.setState(
           {
-            user: res.data
+            user: [randTweet]
           },
           function() {
             console.log(this.state.user);
@@ -104,9 +120,13 @@ class Random extends Component {
         }
       })
       .then(res => {
+        const randNumber = Math.floor(Math.random() * res.data.length)
+        const randTweet = res.data[randNumber]
+        
+        console.log(randTweet);
         this.setState(
           {
-            user: res.data
+            user: [randTweet]
           },
           function() {
             console.log(this.state.user);
@@ -130,7 +150,7 @@ class Random extends Component {
             <p className="d-inline ml-2 user-handle">
               @{users.user.screen_name}
             </p>
-            <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD").toString()}</p>
+            <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD YY").toString()}</p>
             <p className="d-block tweet-text">{users.full_text}</p>
             <Image className="d-block retweet-image" src={ReTweet} />
             <p className="retweet-num">{users.retweet_count}</p>

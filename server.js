@@ -16,7 +16,7 @@ app.get("/api/tweet/random", (req, res) => {
       Authorization:
         "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
     },
-    params: { count: 10,
+    params: { count: 1,
       tweet_mode: "extended",
       lang: "en",
       include_rts: true

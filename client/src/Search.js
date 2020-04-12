@@ -13,7 +13,8 @@ class Search extends Component {
     super();
     this.state = {
       query: [],
-      entry: ""
+      entry: "",
+      handleError: ""
     };
   }
 
@@ -37,6 +38,7 @@ class Search extends Component {
       console.log(this.state.query[0].created_at);
       });
     });
+
   };
 
   getTopic = () => {
@@ -53,6 +55,14 @@ class Search extends Component {
       });
     });
   };
+
+  clearForms = () => {
+    this.setState({
+      entry: ""
+    
+    });
+  };
+
 
   render() {
     const tweetRows = this.state.query.map(users => (
@@ -84,7 +94,7 @@ class Search extends Component {
                 <Form.Control className="control-form" type="input" name="entry" onChange={this.handleChange} placeholder="Search Twitter..." />
                 </Form.Group>
                 <Button as="input" type="button" className="handle-button" onClick={this.getUserHandle} value="Search By User Handle" />
-                <Button className="topic-button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
+                <Button className="topic -button" as="input" onClick={this.getTopic} type="button" value="Search By Topic" />
                 </Col>
             </Row>
             <br />
