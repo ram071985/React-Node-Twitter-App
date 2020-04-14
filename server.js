@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT;
+const port = 3000;//process.env.PORT;
 const path = require("path");
 const axios = require("axios");
 
@@ -10,13 +10,14 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
+
 app.get("/api/tweet/random", (req, res) => {
   const config = {
     headers: {
       Authorization:
         "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
     },
-    params: { count: 1,
+    params: { count: 100,
       tweet_mode: "extended",
       lang: "en",
       include_rts: true
