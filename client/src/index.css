@@ -1,115 +1,110 @@
-
 body {
-    background-color: rgb(255, 202, 123);
-    
+  background-color: rgb(255, 202, 123);
 }
 .color-nav {
-    background-color: rgb(255, 164, 79);
+  background-color: rgb(255, 164, 79);
 }
 
 .container {
-    background-color:rgb(255, 218, 162);
-    color: white;
-    margin-top: 100px;
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-} 
+  background-color: rgb(255, 218, 162);
+  color: white;
+  margin-top: 100px;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+}
 
 .col-4 {
-    margin: 10px 50px;
+  margin: 10px 50px;
 }
 
 .btn img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .container > .tweet-card {
-    margin-top: 20px !important;
+  margin-top: 20px !important;
 }
-
 
 .card-row img {
-    border-radius: 50% !important;
+  border-radius: 50% !important;
 }
-  
+
 .twitter-logo {
- width: 180px;
- height: 180px;
-opacity: 0.8;
+  width: 180px;
+  height: 180px;
+  opacity: 0.8;
 }
 
 .describe {
-    color: black;
-    opacity: 0.8;
+  color: black;
+  opacity: 0.8;
 }
 
 .control-form {
-    width: 90%;
+  width: 90%;
 }
 
 .real-name {
-    color: black;
+  color: black;
 }
 
 .user-handle {
-    color: grey;
+  color: grey;
 }
 
 .tweet-row {
   height: 100% !important;
-
 }
 
 .tweet-col {
-  
-    background-color: white !important;
+  background-color: white !important;
 }
 
 .tweet-col.col img {
-    border-radius: 50% !important;
+  border-radius: 50% !important;
 }
 
 .tweet-text {
-    color: black;
-    margin-left: 65px;
-   text-align: left;
-    padding-right: 80px;
-    padding-bottom: 60px !important;
+  color: black;
+  margin-left: 65px;
+  text-align: left;
+  padding-right: 80px;
+  padding-bottom: 60px !important;
 }
 
 .retweet-image {
-    position: absolute;
-    left: 80px;
-    bottom: 8px;
-   padding: 0px 20px !important;  
+  position: absolute;
+  left: 80px;
+  bottom: 8px;
+  padding: 0px 20px !important;
 }
 
 .like-image {
-    margin: 15px 0px 0px 0px;
-    left: 220px;
-    position: absolute;
-    bottom: 5px;
+  margin: 15px 0px 0px 0px;
+  left: 220px;
+  position: absolute;
+  bottom: 5px;
 }
 
 .retweet-num {
-    margin-bottom: 0;
-    position: absolute;
-    left: 130px;
-    bottom: 8px;
-    color: black;
+  margin-bottom: 0;
+  position: absolute;
+  left: 130px;
+  bottom: 8px;
+  color: black;
 }
 
 .like-num {
-    margin-bottom: 0;
-    left: 248px;
-    bottom: 8px;
-    position: absolute;
-    color: black;
+  margin-bottom: 0;
+  left: 248px;
+  bottom: 8px;
+  position: absolute;
+  color: black;
 }
 
 .favorite-name {
-    color: black;
+  color: black;
 }
 
 .btn-warning {
@@ -120,167 +115,155 @@ opacity: 0.8;
 }
 
 .button-two {
-    background-color: white ;
-    width: 250px;
-    height: 75px;
-    margin: 25px;
-  }
+  background-color: white;
+  width: 250px;
+  height: 75px;
+  margin: 25px;
+}
 
 .button-three {
-    background-color: white ;
-    width: 250px;
-    height: 75px;
-    margin: 25px;
-  }
+  background-color: white;
+  width: 250px;
+  height: 75px;
+  margin: 25px;
+}
 
 .button-four {
-    background-color: white ;
-    width: 250px;
-    height: 75px;
-    margin: 25px;
-  }
+  background-color: white;
+  width: 250px;
+  height: 75px;
+  margin: 25px;
+}
 
-  .button-five {
-    background-color: white ;
-    width: 250px;
-    height: 75px;
-    margin: 25px;
-  }
+.button-five {
+  background-color: white;
+  width: 250px;
+  height: 75px;
+  margin: 25px;
+}
 
 div.col-4-4.col {
-   width:300px !important;
-    }
-    
-.favorite-name-random {       
-     color: black;
-    }
+  width: 300px !important;
+}
+
+.favorite-name-random {
+  color: black;
+}
 
 .real-random-one {
-    position: absolute !important;
-    left: 20px
+  position: absolute !important;
+  left: 20px;
 }
 
 .user-name-random {
-    position: absolute;
-    left: 124px;
-    top: 47px;
-    margin: 0 auto !important;
-    color: grey;
-    
+  position: absolute;
+  left: 124px;
+  top: 47px;
+  margin: 0 auto !important;
+  color: grey;
 }
 
 .choose-text {
   color: black;
-
 }
 
 .column-four.col {
-width: 290px !important;
+  width: 290px !important;
 }
 
-.handle-button, .topic-button {
-    color: white !important;
+.handle-button,
+.topic-button {
+  color: white !important;
 }
 
 @media (min-width: 776px) {
-   .handle-button.btn.btn-primary {
-       margin-right: 25px !important;
-   }
-
+  .handle-button.btn.btn-primary {
+    margin-right: 75px !important;
+    
   }
+}
 
 @media screen and (max-width: 995px) {
-    .card-row {
-        display: block !important;
-    }
-    .col-4 {
-        margin: 10px 10px !important;
-    }
+  .card-row {
+    display: block !important;
+  }
+  .col-4 {
+    margin: 10px 10px !important;
+  }
 }
 
 @media screen and (max-width: 775px) {
-   .topic-button {
-       display: block !important;
-     margin-left: 0 !important;
-     margin-right: 0 !important;
-     margin-top: 10px !important;
-   }
-
-   .col-4 {
+  .col-4 {
     margin: 10px 10px !important;
+  }
+
+  .topic-button {
+    display: block;
 }
 
-   
+.btn {
+    margin: 0px 5px 10px 50px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .form-group {
-        margin: 20px 20px 20px 40px !important;
-    }
-   .tweet-row {
-       height: 350px;
-       width: 350px;
-       margin: 10px;
-   }
-   .tweet-text {
+  .form-group {
+    margin: 20px 20px 20px 40px !important;
+  }
+  .tweet-row {
+    height: 350px;
+    width: 350px;
+    margin: 10px;
+  }
+  .tweet-text {
     padding-right: 20px !important;
-}
-   .tweet-col {
-       padding: 0px 0px 0px 0px !important;
-   }
-   .container {
-       padding: 0;
-   }
-   .choose-text {
-       font-size: 1.3rem;
-       padding: 0 50px;
-   }
+  }
+  .tweet-col {
+    padding: 0px 0px 0px 0px !important;
+  }
+
+  .choose-text {
+    font-size: 1.3rem;
+    padding: 0 50px;
+  }
 
   .btn {
-      margin-left: 85px;
-      }
+    margin: 0px 5px 10px 50px;
+  }
 
-.topic-button.btn.btn-primary {
-        margin-left: 85px !important;
-        }
+
+
+ 
   .col {
-      padding: 0px 0px;
+    padding: 0px 0px;
   }
 
   .btn.btn-warning {
-     width: 140px !important;
-     margin-left: 10px !important;
+    width: 140px !important;
+    margin-left: 10px !important;
   }
 
   .d-inline.real-name.ml-1.mt-1 {
-      font-size: .9rem !important;
+    font-size: 0.9rem !important;
   }
 
   .d-inline.ml-2.user-handle {
-      font-size: .9rem !important;
+    font-size: 0.9rem !important;
   }
 
   .welcome-splash {
-      font-size: 2.4rem;
-      padding: 0px 30px;
+    font-size: 2.4rem;
+    padding: 0px 30px;
   }
   .d-block.describe {
-      padding: 0px 20px;
+    padding: 0px 20px;
   }
 
-
-  
   .col-4 {
-      margin: 10px 10px !important;
+    margin: 10px 10px !important;
   }
 
   .text-left {
-      font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
-
 }
-
-
-
-
-

@@ -6,11 +6,6 @@ const axios = require("axios");
 
 app.use("/", express.static(path.join(__dirname, "client/build")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
-
-
 app.get("/api/tweet/random", (req, res) => {
   const config = {
     headers: {
@@ -35,6 +30,8 @@ app.get("/api/tweet/random", (req, res) => {
 });
 
 app.get("/api/tweet/user", (req, res) => {
+
+  const errorMessage = "Incorrect/User does not exist.";
   const config = {
     headers: {
       Authorization:
@@ -53,9 +50,9 @@ app.get("/api/tweet/user", (req, res) => {
       res.send(twitterResponse.data);
     })
     .catch(err => {
-      res.status(500).send(err);
+    res.send(err);
     });
-});
+}); 
 
 app.get("/api/tweet/topic", (req, res) => {
   const config = {
@@ -70,6 +67,7 @@ app.get("/api/tweet/topic", (req, res) => {
       result_type: "recent"
     }
   };
+
   axios
     .get("https://api.twitter.com/1.1/search/tweets.json?q=" + req.query.topicname, config)
     .then(twitterResponse => {
@@ -79,6 +77,13 @@ app.get("/api/tweet/topic", (req, res) => {
       res.status(500).send(err);
     });
 });
+
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+});
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 // data returning endpoint
