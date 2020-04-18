@@ -6,6 +6,7 @@ import ReTweet from "./images/retweet-action.png";
 import Like from "./images/like-action.png";
 import axios from "axios";
 import moment from "moment";
+import "font-awesome/css/font-awesome.min.css";
 
 class Search extends Component {
   constructor() {
@@ -35,7 +36,14 @@ class Search extends Component {
         if (res.data.message === "Request failed with status code 401") {
           this.setState({
             query: [],
-            errorMessage: "Incorrect user handle/user handle does not exist."
+            errorMessage:
+              "Incorrect user handle/user handle does not exist.  Please try another search."
+          });
+        } else if (res.data.message === "Request failed with status code 500") {
+          this.setState({
+            query: [],
+            errorMessage:
+              "Something went wrong on our end!  Please reload your browser window and try the search again."
           });
         } else {
           this.setState({
@@ -46,8 +54,11 @@ class Search extends Component {
       });
   };
 
-  getTopic = () => {
-    axios
+  getTopic = async e => {
+    this.setState({
+      loading: true
+    });
+    await axios
       .get("/api/tweet/topic", {
         params: { topicname: this.state.entry }
       })
@@ -67,14 +78,22 @@ class Search extends Component {
   handleError = () => {
     return (
       <div>
-        <h4>{this.state.errorMessage}</h4>
+        <h5 className="error-message">{this.state.errorMessage}</h5>
+        <br />
+      </div>
+    );
+  };
+
+  LoadingSpinner = () => {
+    return (
+      <div>
+        <i className="fa fa-spinner fa-spin" /> Loading...
       </div>
     );
   };
 
   render() {
-    console.log(this.state.query);
-
+ 
     return (
       <Container fluid>
         <br />

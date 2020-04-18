@@ -144,13 +144,13 @@ class Random extends Component {
               className="d-inline mt-2 mr-1 ml-1"
               src={users.user.profile_image_url}
             />
-            <h6 className="d-inline real-name ml-1 mt-1">
+            <h6 className="d-inline real-name mt-1">
               <strong>{users.user.name}</strong>
             </h6>
-            <p className="d-inline ml-2 user-handle">
+            <p className="d-inline ml-1 user-handle">
               @{users.user.screen_name}
             </p>
-            <p className="d-inline ml-2 user-handle">{moment(users.created_at).format("MMM DD YY").toString()}</p>
+            <p className="d-inline ml-1 tweet-date">{moment(users.created_at).format("MMM DD YY").toString()}</p>
             <p className="d-block tweet-text">{users.full_text}</p>
             <Image className="d-block retweet-image" src={ReTweet} />
             <p className="retweet-num">{users.retweet_count}</p>
@@ -162,7 +162,7 @@ class Random extends Component {
     ));
 
     return (
-      <Container className="container-random">
+      <Container fluid className="container-random">
         <Row>
           <Col>
             <h4 className="text-center mt-3 choose-text">
@@ -171,15 +171,14 @@ class Random extends Component {
             </h4>
           </Col>
         </Row>
-        <br />
         <Row>
           <Col className="col-4">
             <button
-              className="d-block btn btn-warning"
+              className="d-block btn btn-warning eckhart-random"
               onClick={this.getEckhartTolle}
               size="lg"
             >
-              <Image className="d-inline mr-2 reid-random" src={Eckhart} />
+              <Image className="d-inline" src={Eckhart} />
               <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Eckhart Tolle</strong>
               </h6>
@@ -187,11 +186,11 @@ class Random extends Component {
           </Col>
           <Col className="col-4">
             <button
-              className="d-inline btn btn-warning"
+              className="d-inline btn btn-warning questlove-random"
               onClick={this.getQuestlove}
               size="lg"
             >
-              <Image className="d-inline mr-2 reid-random" src={Questlove} />
+              <Image className="d-inline mr-2 questlove-random" src={Questlove} />
               <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>?NG Shamen</strong>
               </h6>
@@ -201,11 +200,11 @@ class Random extends Component {
           <Row>
           <Col className="col-4">
             <button
-              className="d-block btn btn-warning"
+              className="d-block btn btn-warning yuval-random"
               onClick={this.getYuval}
               size="lg"
             >
-              <Image className="d-inline mr-2 reid-random" src={Yuval} />
+              <Image className="d-inline mr-2 yuval-random" src={Yuval} />
               <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Yuval Noah Harari</strong>
               </h6>
@@ -213,11 +212,11 @@ class Random extends Component {
           </Col>
           <Col className="col-4">
             <button
-              className="d-block btn btn-warning"
+              className="d-block btn btn-warning stevie-random"
               onClick={this.getStevie}
               size="lg"
             >
-              <Image className="d-inline mr-2 reid-random" src={Stevie} />
+              <Image className="d-inline mr-2 stevie-random" src={Stevie} />
               <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Stevie Wonder</strong>
               </h6>
@@ -227,21 +226,17 @@ class Random extends Component {
           <Row>
           <Col className="col-4">
             <button
-              className="d-block btn btn-warning"
+              className="d-block btn btn-warning bob-random"
               onClick={this.getBob}
               size="lg"
             >
-              <Image className="d-inline mr-2 reid-random" src={Bob} />
+              <Image className="d-inline mr-2 bob-random" src={Bob} />
               <h6 className="d-block text-center real-name-random-one text-left">
                 <strong>Bob Marley</strong>
               </h6>
             </button>
           </Col>
         </Row>
-        <br />
-        <br />
-        <br />
-
         {tweetRows}
         <br />
       </Container>

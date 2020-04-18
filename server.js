@@ -31,7 +31,6 @@ app.get("/api/tweet/random", (req, res) => {
 
 app.get("/api/tweet/user", (req, res) => {
 
-  const errorMessage = "Incorrect/User does not exist.";
   const config = {
     headers: {
       Authorization:

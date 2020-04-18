@@ -14,6 +14,10 @@ body {
   height: 100%;
 }
 
+.error-message {
+  color: red;
+}
+
 .col-4 {
   margin: 10px 50px;
 }
@@ -51,6 +55,13 @@ body {
 
 .user-handle {
   color: grey;
+}
+
+.tweet-date {
+  color: grey;
+  position: absolute;
+  top: 32px;
+  left: 78px;
 }
 
 .tweet-row {
@@ -109,7 +120,7 @@ body {
 
 .btn-warning {
   background: rgb(255, 218, 149) !important;
-  width: 250px;
+  width: 175px;
   height: 75px;
   margin: 5px;
 }
@@ -179,7 +190,33 @@ div.col-4-4.col {
 @media (min-width: 776px) {
   .handle-button.btn.btn-primary {
     margin-right: 75px !important;
-    
+  }
+  .btn.eckhart-random {
+    margin: 5px 30px 5px 30px !important;
+    width: 200px;
+    height: 115px;
+  }
+
+  .btn.questlove-random {
+    margin: 5px 30px 5px 30px;
+    width: 200px;
+    height: 115px;
+  }
+
+  .btn.yuval-random {
+    margin: 5px 30px 5px 30px;
+    width: 200px;
+    height: 115px;
+  }
+  .btn.stevie-random {
+    margin: 5px 30px 5px 30px;
+    width: 200px;
+    height: 115px;
+  }
+  .btn.bob-random {
+    margin: 5px 30px 5px 30px;
+    width: 200px;
+    height: 115px;
   }
 }
 
@@ -190,6 +227,34 @@ div.col-4-4.col {
   .col-4 {
     margin: 10px 10px !important;
   }
+
+  .btn.eckhart-random {
+    margin: 5px 30px 5px 30px !important;
+    width: 125px;
+    height: 100px;
+  }
+
+  .btn.questlove-random {
+    margin: 5px 30px 5px 30px;
+    width: 125px;
+    height: 100px;
+  }
+
+  .btn.yuval-random {
+    margin: 5px 30px 5px 30px;
+    width: 125px;
+    height: 100px;
+  }
+  .btn.stevie-random {
+    margin: 5px 30px 5px 30px;
+    width: 125px;
+    height: 100px;
+  }
+  .btn.bob-random {
+    margin: 5px 30px 5px 30px;
+    width: 125px;
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 775px) {
@@ -199,11 +264,15 @@ div.col-4-4.col {
 
   .topic-button {
     display: block;
-}
+  }
 
-.btn {
+  .btn.handle-button {
     margin: 0px 5px 10px 50px;
   }
+}
+
+.btn.topic-button {
+  margin: 0px 5px 10px 50px;
 }
 
 @media screen and (max-width: 500px) {
@@ -216,10 +285,11 @@ div.col-4-4.col {
     margin: 10px;
   }
   .tweet-text {
-    padding-right: 20px !important;
+    margin-left: 59px;
   }
-  .tweet-col {
+  .tweet-col.col {
     padding: 0px 0px 0px 0px !important;
+    margin-right: 20px !important;
   }
 
   .choose-text {
@@ -227,20 +297,16 @@ div.col-4-4.col {
     padding: 0 50px;
   }
 
-  .btn {
+  .btn.handle-button {
     margin: 0px 5px 10px 50px;
   }
 
-
-
- 
-  .col {
-    padding: 0px 0px;
+  .btn.topic-button {
+    margin: 0px 5px 10px 30px;
   }
 
-  .btn.btn-warning {
-    width: 140px !important;
-    margin-left: 10px !important;
+  .col {
+    padding: 0px 0px;
   }
 
   .d-inline.real-name.ml-1.mt-1 {
@@ -259,11 +325,57 @@ div.col-4-4.col {
     padding: 0px 20px;
   }
 
-  .col-4 {
-    margin: 10px 10px !important;
-  }
-
   .text-left {
     font-size: 0.8rem !important;
+  }
+
+  .btn.eckhart-random {
+    margin: 5px 30px 5px 30px !important;
+    width: 100px;
+    height: 95px;
+  }
+
+  .btn.questlove-random {
+    margin: 5px 30px 5px 30px;
+    width: 100px;
+    height: 95px;
+  }
+
+  .btn.yuval-random {
+    margin: 5px 30px 5px 30px;
+    width: 100px;
+    height: 95px;
+  }
+  .btn.stevie-random {
+    margin: 5px 30px 5px 30px;
+    width: 100px;
+    height: 95px;
+  }
+  .btn.bob-random {
+    margin: 5px 30px 5px 30px;
+    width: 100px;
+    height: 95px;
+  }
+  .container {
+    background-color: rgb(255, 218, 162);
+    color: white;
+    margin-top: 100px;
+    padding: 0px 0px !important;
+    width: 100%;
+    height: 100%;
+  }
+  .container-random.container-fluid {
+    padding: 0px 0px;
+  }
+
+  .tweet-card.container {
+    margin: 0px 0px;
+  }
+
+  .tweet-date {
+    color: grey;
+    position: absolute;
+    top: 32px;
+    left: 55px;
   }
 }
