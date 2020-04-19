@@ -2,7 +2,7 @@
 
 App powered with React.js, Node.js and Express that utilizes twitter's search api with a landing page, search page with options for looking up tweets by a user handle or by topic and a page with my 5 favorite Twitter users and 10 random tweets from them. See my deployed version on Heroku - [HERE](https://floating-shore-26202.herokuapp.com/) or open-source here at my remote repostiory [Github](https://github.com/ram071985/twitter-app)
 
-![](../images/twitter-capstone.png)
+![](/images/twitter-capstone.png)
 
 ## Summary
 
