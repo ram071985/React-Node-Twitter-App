@@ -182,8 +182,8 @@ div.col-4-4.col {
   width: 290px !important;
 }
 
-.handle-button,
-.topic-button {
+.btn.handle-button,
+.btn.topic-button {
   color: white !important;
 }
 
@@ -272,7 +272,7 @@ div.col-4-4.col {
 }
 
 .btn.topic-button {
-  margin: 0px 5px 10px 50px;
+  margin: 0px 5px 0px 50px;
 }
 
 @media screen and (max-width: 500px) {
@@ -302,7 +302,7 @@ div.col-4-4.col {
   }
 
   .btn.topic-button {
-    margin: 0px 5px 10px 30px;
+    margin: 0px 5px 10px 50px;
   }
 
   .col {
