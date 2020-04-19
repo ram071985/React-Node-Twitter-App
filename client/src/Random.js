@@ -167,7 +167,7 @@ class Random extends Component {
           <Col>
             <h4 className="text-center mt-3 choose-text">
               Choose from one of my <strong>5</strong> favorite twitter users to
-              see <strong>10</strong> of their random tweets.
+              see <strong>1</strong> of their random tweets.
             </h4>
           </Col>
         </Row>
