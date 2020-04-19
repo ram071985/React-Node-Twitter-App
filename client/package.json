@@ -1,6 +1,6 @@
 {
   "name": "twitter-capstone",
-  "home": "http://localhost:3000",
+  "home": "https://floating-shore-26202.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
