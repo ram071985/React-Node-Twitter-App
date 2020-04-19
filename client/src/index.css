@@ -14,6 +14,10 @@ body {
   height: 100%;
 }
 
+.welcome-text {
+  font-size: 4rem;
+}
+
 .error-message {
   color: red;
 }
@@ -276,6 +280,19 @@ div.col-4-4.col {
 }
 
 @media screen and (max-width: 500px) {
+
+  .row {
+    margin: 0;
+  }
+  .welcome-text {
+    padding: 0px 40px;
+    line-height: 1;
+    font-size: 3rem;
+  }
+
+  h6.d-block.describe {
+    padding: 0px 40px;
+  }
   .form-group {
     margin: 20px 20px 20px 40px !important;
   }
