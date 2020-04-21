@@ -192,7 +192,7 @@ class Random extends Component {
             >
               <Image className="d-inline mr-2 questlove-random" src={Questlove} />
               <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>?NG Shamen</strong>
+                <strong>Questlove</strong>
               </h6>
             </button>
           </Col>

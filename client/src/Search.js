@@ -6,7 +6,6 @@ import ReTweet from "./images/retweet-action.png";
 import Like from "./images/like-action.png";
 import axios from "axios";
 import moment from "moment";
-import "font-awesome/css/font-awesome.min.css";
 
 class Search extends Component {
   constructor() {
@@ -33,22 +32,21 @@ class Search extends Component {
         params: { screenname: this.state.entry }
       })
       .then(res => {
-        if (res.data.message === "Request failed with status code 401") {
-          this.setState({
+        this.setState( {
+          query: res.data,
+          errorMessage: ""
+        })
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          this.setState( {
             query: [],
-            errorMessage:
-              "Incorrect user handle/user handle does not exist.  Please try another search."
-          });
-        } else if (res.data.message === "Request failed with status code 500") {
-          this.setState({
-            query: [],
-            errorMessage:
-              "Something went wrong on our end!  Please reload your browser window and try the search again."
+            errorMessage: "Incorrect user handle/user handle does not exist.  Please try another search."
           });
         } else {
-          this.setState({
-            query: res.data,
-            errorMessage: ""
+          this.setState( {
+            query: [],
+            errorMessage: "Whoops!  Something went wrong... Please refresh the browser and try your search query again."
           });
         }
       });
@@ -58,7 +56,7 @@ class Search extends Component {
     this.setState({
       loading: true
     });
-    await axios
+    axios
       .get("/api/tweet/topic", {
         params: { topicname: this.state.entry }
       })
@@ -84,16 +82,8 @@ class Search extends Component {
     );
   };
 
-  LoadingSpinner = () => {
-    return (
-      <div>
-        <i className="fa fa-spinner fa-spin" /> Loading...
-      </div>
-    );
-  };
-
   render() {
- 
+
     return (
       <Container fluid>
         <br />

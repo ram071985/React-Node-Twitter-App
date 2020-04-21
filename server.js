@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT;
+const port = 3000;process.env.PORT;
 const path = require("path");
 const axios = require("axios");
 
@@ -49,7 +49,8 @@ app.get("/api/tweet/user", (req, res) => {
       res.send(twitterResponse.data);
     })
     .catch(err => {
-    res.send(err);
+    res.status(401).send(err);
+    res.status(500).send(err);
     });
 }); 
 
