@@ -1,4 +1,7 @@
+<<<<<<< HEAD
   
+=======
+>>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
@@ -53,12 +56,20 @@ class Search extends Component {
       });
   };
 
+<<<<<<< HEAD
   getTopic = () => {
+=======
+  getTopic = async e => {
+    this.setState({
+      loading: true
+    });
+>>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
     axios
       .get("/api/tweet/topic", {
         params: { topicname: this.state.entry }
       })
       .then(res => {
+<<<<<<< HEAD
         if(res.data.statuses.length >= 1) {
         this.setState({
           query: res.data.statuses
@@ -85,6 +96,12 @@ class Search extends Component {
         }
       });
       
+=======
+        this.setState({
+          query: res.data.statuses
+        });
+      });
+>>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
   };
 
   clearForms = () => {
@@ -171,4 +188,8 @@ class Search extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default Search;
+=======
+export default Search;
+>>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
