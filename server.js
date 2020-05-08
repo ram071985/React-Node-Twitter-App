@@ -1,10 +1,6 @@
 const express = require("express");
 const app = express();
-<<<<<<< HEAD
-const port = 3000; //process.env.PORT;
-=======
 const port = process.env.PORT;
->>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
 const path = require("path");
 const axios = require("axios");
 
