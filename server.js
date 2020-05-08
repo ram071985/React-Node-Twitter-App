@@ -74,13 +74,9 @@ app.get("/api/tweet/topic", (req, res) => {
       res.send(twitterResponse.data);
     })
     .catch(err => {
-<<<<<<< HEAD
       res.status(401).send(err);
       res.status(500).send(err);
       res.status(304).send(err);
-=======
-      res.status(500).send(err);
->>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
     });
 });
 
@@ -91,13 +87,4 @@ app.get("/*", (req, res) => {
 
 
 
-<<<<<<< HEAD
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-=======
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-// data returning endpoint
-// send http request to my endpoint 
-//get the data back and console it
-// display data in ui
-//display data in ui and in table /etc.
->>>>>>> 9a8de5d85c036c8c93a60a70dd0166dff797c695
