@@ -24,6 +24,7 @@
     "toastr": "^2.1.4"
   },
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
   }
 }

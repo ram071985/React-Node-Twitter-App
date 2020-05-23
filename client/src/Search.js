@@ -1,3 +1,5 @@
+
+
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
@@ -52,19 +54,38 @@ class Search extends Component {
       });
   };
 
-  getTopic = async e => {
-    this.setState({
-      loading: true
-    });
+  getTopic = () => {
     axios
       .get("/api/tweet/topic", {
         params: { topicname: this.state.entry }
       })
       .then(res => {
+        if(res.data.statuses.length >= 1) {
         this.setState({
           query: res.data.statuses
         });
+        console.log(res.data.statuses.length);
+      } else {
+        this.setState({
+          query: [],
+          errorMessage: "No results for topic.  Please try another query."
+        });
+      }
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          this.setState( {
+            query: [],
+            errorMessage: "There was no input.  Please type a valid query."
+          });
+        } else {
+          this.setState( {
+            query: [],
+            errorMessage: "Whoops!  Something went wrong... Please refresh the browser and try your search query again."
+          });
+        }
       });
+      
   };
 
   clearForms = () => {

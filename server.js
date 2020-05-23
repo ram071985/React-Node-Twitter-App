@@ -74,7 +74,9 @@ app.get("/api/tweet/topic", (req, res) => {
       res.send(twitterResponse.data);
     })
     .catch(err => {
+      res.status(401).send(err);
       res.status(500).send(err);
+      res.status(304).send(err);
     });
 });
 
@@ -86,8 +88,3 @@ app.get("/*", (req, res) => {
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-// data returning endpoint
-// send http request to my endpoint 
-//get the data back and console it
-// display data in ui
-//display data in ui and in table /etc.
