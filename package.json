@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "twitter-app",
+  "description": "muchow-concrete-react",
   "main": "server.js",
   "engines": {
     "node": "12.15.0"

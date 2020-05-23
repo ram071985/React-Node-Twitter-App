@@ -1,21 +1,30 @@
 # Twitter Search Api (Html/Css, Bootstrap, Javascript, React and Node.js)
 
-App powered with React.js, Node.js and Express that utilizes twitter's search api with a landing page, search page with options for looking up tweets by a user handle or by topic and a page with my 5 favorite Twitter users and 10 random tweets from them. See my deployed version on Heroku - [HERE](https://floating-shore-26202.herokuapp.com/) or open-source here at my remote repostiory [Github](https://github.com/ram071985/twitter-app)
+App powered with React.js, Node.js and Express using an internal api and twitter's search api to get back data from twitter users and topic tweets. 
+
+See my deployed version on Heroku - [HERE](https://floating-shore-26202.herokuapp.com/) or open-source here at my remote repostiory [Github](https://github.com/ram071985/twitter-app)
 
 ![](client/src/images/twitter-capstone.png)
 
 ## Summary
 
-In order to better stand how an internal api works along with RESTful APIs, it's crucial to work with a public api like Twitter's Standard Search API to understand how to send and retreive data in web apps.  On the front-end of this app I used the javascript framework React.js with client-side routing and bootstrap for styling along with customized CSS with media quries for responsive design and UI.  The back-end uses Express for routing the internal api and Node.js as a "middle-man" for making HTTP requests to Twitter and sending back data to the app's client side.  On the search section of the web app you can either choose between a query of a twitter user's handle or a random topic which dynamically renders 10 tweet cards with the data displayed in twitter-like fashion.  On the random page the user can choose from one of my 5 favorite twitter users and 10 tweet results are generated again with the data through the internal api call, to the server, to the twitter http request address and back to the client side to display on the UI.  I gained a lot of experience with postman to check the api queries and JSON data coming back.  Using the Axios and Moment libraries was very helpful with making HTTP requests and parsing date information.   
+Building this app taught me how to build an internal API and use RESTful api practices with a client-server model.  With node.js and express, I designed an internal API that sends requests from client to server-side.  The server then sends tweet data back from twitter to the app's server, and from there the server sends back the twitter data to the client side and populates it based on the client side user query.  The error handling and get requests are conducted using the Axios node.js framework for promise based HTTP requests.  I was able to configure error handling for several situations including when an input field has an incorrect value, when there is no tweet data available from the query(404), and when the server is not responding(500).  I thoroughly enjoyed learning how to use node.js and express and diving deeper into the world of API's.
 
-## Features
+On the front-end of this app I used the JavaScript framework React.js with client-side routing.  For styling, I used bootstrap and CSS with media queries for responsive design and UI.  There are 3 sections to the app; the splash or landing page, search page and favorite twitter users page.  On the search section of the web app you can choose between querying twitter user's handle or a random topic which dynamically renders 10 tweet cards with the data displayed in twitter-like fashion.  On the random page the user can choose from one of my 5 favorite twitter users and the page will display 10 random tweets from that user.  I became acquainted with the Moment library to help with reconstructing tweet date data coming back from the standard twitter search API.
 
-- React.js front-end UI
-- Express internal API
-- Node.js server
-- responsive UI/UX
-- user handle and topic twitter tweets search
-- choose between 5 of my favorite twitter users to see 10 random tweets from them
+## Installation Instructions
+
+First install the project dependencies and scripts.  In the directory run the command:
+
+```
+npm i
+```
+
+Then to run the app on your system use the command:
+
+```
+npm run start
+```
 
 
 ## Author 
