@@ -1,4 +1,4 @@
-# Twitter Search Api (Html/Css, Bootstrap, Javascript, React and Node.js)
+# Twitter Search Api (Bootstrap, React.js and Node.js)
 
 App powered with React.js, Node.js and Express using an internal api and twitter's search api to get back data from twitter users and topic tweets. 
 
@@ -14,7 +14,7 @@ On the front-end of this app I used the JavaScript framework React.js with clien
 
 ## Installation Instructions
 
-First install the project dependencies and scripts.  In the directory run the command:
+First install the project dependencies and scripts.  In the root directory run the command:
 
 ```
 npm i
