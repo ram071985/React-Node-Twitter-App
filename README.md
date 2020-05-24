@@ -15,18 +15,14 @@ On the front-end of this app I used the JavaScript framework React.js with clien
 ## Installation Instructions
 
 1.) Run `npm i` in the terminal (in the root directory)
+
 2.) Run `npm --prefix client` in the terminal (in the root directory)
+
 3.) Create a file called `.env`. Use the `dev.env` file as a template. 
+
 4.) Run the script `npm run dev` to fire up the server
+
 5.) Open a browser and navigate to `localhost:3000`
-
-
-
-Then to run the app on your system use the command:
-
-```
-npm run start
-```
 
 
 ## Author 
