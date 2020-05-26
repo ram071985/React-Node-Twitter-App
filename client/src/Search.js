@@ -25,7 +25,6 @@ class Search extends Component {
       [name]: value,
       errorMessage: ""
     });
-    console.log(this.state.entry);
   };
 
   getUserHandle = () => {
@@ -64,7 +63,6 @@ class Search extends Component {
         this.setState({
           query: res.data.statuses
         });
-        console.log(res.data.statuses.length);
       } else {
         this.setState({
           query: [],
@@ -126,20 +124,20 @@ class Search extends Component {
               type="button"
               className="handle-button"
               onClick={this.getUserHandle}
-              value="Search By User Handle"
+              placeholder="Search By User Handle"
             />
             <Button
               className="topic-button"
               as="input"
               onClick={this.getTopic}
               type="button"
-              value="Search By Topic"
+              placeholder="Search By Topic"
             />
           </Col>
         </Row>
         <br />
-        {this.state.query.map(users => (
-          <Container className="tweet-card">
+        {this.state.query.map((users, index) => (
+          <Container key={index} className="tweet-card">
             <Row className="d-block tweet-row">
               <Col className="tweet-col">
                 <Image

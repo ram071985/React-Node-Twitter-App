@@ -16,128 +16,36 @@ class Random extends Component {
   constructor() {
     super();
     this.state = {
-      user: []
+      user: [],
+      randomUsers: [
+        {name: 'Eckhart Tolle', username: 'eckharttolle', src: Eckhart },
+        {name: 'Questlove', username: 'questlove', src: Questlove },
+        {name: 'Yuval Harari', username: 'harari_yuval', src: Yuval },
+        {name: 'Stevie Wonder', username: 'StevieWonder', src: Stevie },
+        {name: 'Bob Marley', username: 'bobmarley', src: Bob }
+      ]
     };
   }
 
-  getEckhartTolle = () => {
+  getRandomTweet = (username) => {
     axios
-      .get("/api/tweet/random", {
-        params: {
-          favorite: "eckharttolle"
-        }
-      })
-      .then(res => {
-        const randNumber = Math.floor(Math.random() * res.data.length)
-        const randTweet = res.data[randNumber]
-        
-        console.log(randTweet);
-        this.setState(
-          {
-            user: [randTweet]
-          },
-          function() {
-            console.log(this.state.user);
-          }
-        );
-      });
-  };
-
-  getQuestlove = () => {
-    axios
-      .get("/api/tweet/random", {
-        params: {
-          favorite: "questlove"
-        }
-      })
-      .then(res => {
-        const randNumber = Math.floor(Math.random() * res.data.length)
-        const randTweet = res.data[randNumber]
-        
-        console.log(randTweet);
-        this.setState(
-          {
-            user: [randTweet]
-          },
-          function() {
-            console.log(this.state.user);
-          }
-        );
-      });
-  };
-
-  getYuval = () => {
-    axios
-      .get("/api/tweet/random", {
-        params: {
-          favorite: "harari_yuval"
-        }
-      })
-      .then(res => {
-        const randNumber = Math.floor(Math.random() * res.data.length)
-        const randTweet = res.data[randNumber]
-        
-        console.log(randTweet);
-        this.setState(
-          {
-            user: [randTweet]
-          },
-          function() {
-            console.log(this.state.user);
-          }
-        );
-      });
-  };
-
-  getStevie = () => {
-    axios
-      .get("/api/tweet/random", {
-        params: {
-          favorite: "StevieWonder"
-        }
-      })
-      .then(res => {
-        const randNumber = Math.floor(Math.random() * res.data.length)
-        const randTweet = res.data[randNumber]
-        
-        console.log(randTweet);
-        this.setState(
-          {
-            user: [randTweet]
-          },
-          function() {
-            console.log(this.state.user);
-          }
-        );
-      });
-  };
-
-  getBob = () => {
-    axios
-      .get("/api/tweet/random", {
-        params: {
-          favorite: "bobmarley"
-        }
-      })
-      .then(res => {
-        const randNumber = Math.floor(Math.random() * res.data.length)
-        const randTweet = res.data[randNumber]
-        
-        console.log(randTweet);
-        this.setState(
-          {
-            user: [randTweet]
-          },
-          function() {
-            console.log(this.state.user);
-          }
-        );
-      });
-  };
+    .get("/api/tweet/random", {
+      params: {
+        favorite: username,
+      }
+    })
+    .then(res => {
+      this.setState(
+        {
+          user: [res.data],
+        },
+      );
+    });
+  }
 
   render() {
-    const tweetRows = this.state.user.map(users => (
-      <Container className="tweet-card">
+    const tweetRows = this.state.user.map((users, index) => (
+      <Container key={index} className="tweet-card">
         <Row className="d-block tweet-row">
           <Col className="tweet-col">
             <Image
@@ -161,6 +69,23 @@ class Random extends Component {
       </Container>
     ));
 
+    const cards = this.state.randomUsers.map((randomUser, index) => {
+        return (
+          <Col key={index} className="col-4">
+          <button
+            className="d-block btn btn-warning eckhart-random"
+            onClick={(e) => { this.getRandomTweet(randomUser.username)} }
+            size="lg"
+          >
+            <Image className="d-inline" src={randomUser.src} />
+            <h6 className="d-block text-center real-name-random-one text-left">
+              <strong>{randomUser.name}</strong>
+            </h6>
+          </button>
+        </Col>
+        )
+    });
+
     return (
       <Container fluid className="container-random">
         <Row>
@@ -171,72 +96,7 @@ class Random extends Component {
             </h4>
           </Col>
         </Row>
-        <Row>
-          <Col className="col-4">
-            <button
-              className="d-block btn btn-warning eckhart-random"
-              onClick={this.getEckhartTolle}
-              size="lg"
-            >
-              <Image className="d-inline" src={Eckhart} />
-              <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>Eckhart Tolle</strong>
-              </h6>
-            </button>
-          </Col>
-          <Col className="col-4">
-            <button
-              className="d-inline btn btn-warning questlove-random"
-              onClick={this.getQuestlove}
-              size="lg"
-            >
-              <Image className="d-inline mr-2 questlove-random" src={Questlove} />
-              <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>Questlove</strong>
-              </h6>
-            </button>
-          </Col>
-          </Row>
-          <Row>
-          <Col className="col-4">
-            <button
-              className="d-block btn btn-warning yuval-random"
-              onClick={this.getYuval}
-              size="lg"
-            >
-              <Image className="d-inline mr-2 yuval-random" src={Yuval} />
-              <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>Yuval Noah Harari</strong>
-              </h6>
-            </button>
-          </Col>
-          <Col className="col-4">
-            <button
-              className="d-block btn btn-warning stevie-random"
-              onClick={this.getStevie}
-              size="lg"
-            >
-              <Image className="d-inline mr-2 stevie-random" src={Stevie} />
-              <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>Stevie Wonder</strong>
-              </h6>
-            </button>
-          </Col>
-          </Row>
-          <Row>
-          <Col className="col-4">
-            <button
-              className="d-block btn btn-warning bob-random"
-              onClick={this.getBob}
-              size="lg"
-            >
-              <Image className="d-inline mr-2 bob-random" src={Bob} />
-              <h6 className="d-block text-center real-name-random-one text-left">
-                <strong>Bob Marley</strong>
-              </h6>
-            </button>
-          </Col>
-        </Row>
+        <Row>{cards}</Row>
         {tweetRows}
         <br />
       </Container>

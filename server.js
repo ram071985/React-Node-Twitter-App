@@ -4,48 +4,53 @@ require('dotenv').config()
 const port = process.env.PORT;
 const path = require("path");
 const axios = require("axios");
+const tokenService = require("./tokenService.js");
 
 app.use("/", express.static(path.join(__dirname, "client/build")));
 
-app.get("/api/tweet/random", (req, res) => {
+app.get("/api/tweet/random", async (req, res) => {
   const config = {
     headers: {
       Authorization:
-        "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
+        `Bearer ${await tokenService.getToken()}`
     },
     params: { count: 100,
       tweet_mode: "extended",
       lang: "en",
-      include_rts: true
+      include_rts: true,
+      screen_name: req.query.favorite
     }
   };
+
   axios
-    .get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + req.query.favorite, config)
+    .get("https://api.twitter.com/1.1/statuses/user_timeline.json", config)
     .then(twitterResponse => {
-  
-      res.send(twitterResponse.data);
+      const randNumber = Math.floor(Math.random() * twitterResponse.data.length)
+      const randTweet = twitterResponse.data[randNumber];
+      res.send(randTweet);
     })
     .catch(err => {
       res.status(500).send(err);
     });
 });
 
-app.get("/api/tweet/user", (req, res) => {
-
+app.get("/api/tweet/user", async (req, res) => {
   const config = {
     headers: {
       Authorization:
-        "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
+      `Bearer ${await tokenService.getToken()}`
     },
     params: {
       count: 10,
       tweet_mode: "extended",
       include_rts: true,
-      result_type: "recent"
+      result_type: "recent",
+      screen_name: req.query.screenname
     }
   };
+
   axios
-    .get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + req.query.screenname, config)
+    .get("https://api.twitter.com/1.1/statuses/user_timeline.json", config)
     .then(twitterResponse => {
       res.send(twitterResponse.data);
     })
@@ -55,22 +60,23 @@ app.get("/api/tweet/user", (req, res) => {
     });
 }); 
 
-app.get("/api/tweet/topic", (req, res) => {
+app.get("/api/tweet/topic", async (req, res) => {
   const config = {
     headers: {
       Authorization:
-        "Bearer AAAAAAAAAAAAAAAAAAAAAO23DAEAAAAA0UvE62fUsmqWWFM3F3xuCh5QFAY%3D9CVBej4ed4zQYI0sxVxHSa2m8ILnOQ5W2AegDWjJo0yBvgg1VV"
+      `Bearer ${await tokenService.getToken()}`
     },
     params: {
       count: 10,
       tweet_mode: "extended",
       lang: "en",
-      result_type: "recent"
+      result_type: "recent",
+      q: req.query.topicname
     }
   };
 
   axios
-    .get("https://api.twitter.com/1.1/search/tweets.json?q=" + req.query.topicname, config)
+    .get("https://api.twitter.com/1.1/search/tweets.json", config)
     .then(twitterResponse => {
       res.send(twitterResponse.data);
     })
@@ -81,11 +87,8 @@ app.get("/api/tweet/topic", (req, res) => {
     });
 });
 
-
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
-
-
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

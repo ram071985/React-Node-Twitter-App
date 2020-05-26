@@ -18,11 +18,13 @@ On the front-end of this app I used the JavaScript framework React.js with clien
 
 2.) Run `npm --prefix client` in the terminal (in the root directory)
 
-3.) Create a file called `.env`. Use the `dev.env` file as a template. 
+3.) Create a file called `.env`. Use the `dev.env` file as a template 
 
-4.) Run the script `npm run dev` to fire up the server
+4.) Replace the KEY/SECRET in .env with actual Twitter API keys
 
-5.) Open a browser and navigate to `localhost:3000`
+5.) Run the script `npm run dev` to fire up the server
+
+6.) Open a browser and navigate to `localhost:3000`
 
 
 ## Author 

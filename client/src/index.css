@@ -5,6 +5,10 @@ body {
   background-color: rgb(255, 164, 79);
 }
 
+::placeholder {
+  color: white;
+}
+
 .container {
   background-color: rgb(255, 218, 162);
   color: white;
