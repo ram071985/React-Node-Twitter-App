@@ -20,13 +20,13 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "toastr": "^2.1.4"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
     "cra-build-watch": "^3.2.0",
-    "dotenv": "^8.2.0",
     "nodemon": "^2.0.3"
   }
 }
