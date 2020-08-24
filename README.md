@@ -2,7 +2,7 @@
 
 App powered with React.js, Node.js and Express using an internal api and twitter's search api to get back data from twitter users and topic tweets. 
 
-See my deployed version on Heroku - [HERE](https://reid-twitter-showcase.herokuapp.com/) or open-source here at my remote repostiory [Github](https://github.com/ram071985/twitter-app)
+See my deployed version on Heroku - [HERE](https://reidtwittersearch.herokuapp.com/)
 
 ![](client/src/images/twitter-capstone.png)
 
