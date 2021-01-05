@@ -14,7 +14,7 @@ class NavBar extends Component {
       <Container>
         <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
           <Navbar.Brand as={Link} to="/">
-            Twitter Search Api
+            <h2>Tweet Your Heart Out</h2>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

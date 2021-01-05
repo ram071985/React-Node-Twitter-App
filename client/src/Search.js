@@ -1,5 +1,3 @@
-
-
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
@@ -15,39 +13,41 @@ class Search extends Component {
     this.state = {
       query: [],
       entry: "",
-      errorMessage: ""
+      errorMessage: "",
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
-      errorMessage: ""
+      errorMessage: "",
     });
   };
 
   getUserHandle = () => {
     axios
       .get("/api/tweet/user", {
-        params: { screenname: this.state.entry }
+        params: { screenname: this.state.entry },
       })
-      .then(res => {
-        this.setState( {
+      .then((res) => {
+        this.setState({
           query: res.data,
-          errorMessage: ""
-        })
+          errorMessage: "",
+        });
       })
-      .catch(err => {
+      .catch((err) => {
         if (err.response.status === 401) {
-          this.setState( {
+          this.setState({
             query: [],
-            errorMessage: "Incorrect user handle/user handle does not exist.  Please try another search."
+            errorMessage:
+              "Incorrect user handle/user handle does not exist.  Please try another search.",
           });
         } else {
-          this.setState( {
+          this.setState({
             query: [],
-            errorMessage: "Whoops!  Something went wrong... Please refresh the browser and try your search query again."
+            errorMessage:
+              "Whoops!  Something went wrong... Please refresh the browser and try your search query again.",
           });
         }
       });
@@ -56,39 +56,39 @@ class Search extends Component {
   getTopic = () => {
     axios
       .get("/api/tweet/topic", {
-        params: { topicname: this.state.entry }
+        params: { topicname: this.state.entry },
       })
-      .then(res => {
-        if(res.data.statuses.length >= 1) {
-        this.setState({
-          query: res.data.statuses
-        });
-      } else {
-        this.setState({
-          query: [],
-          errorMessage: "No results for topic.  Please try another query."
-        });
-      }
-      })
-      .catch(err => {
-        if (err.response.status === 401) {
-          this.setState( {
-            query: [],
-            errorMessage: "There was no input.  Please type a valid query."
+      .then((res) => {
+        if (res.data.statuses.length >= 1) {
+          this.setState({
+            query: res.data.statuses,
           });
         } else {
-          this.setState( {
+          this.setState({
             query: [],
-            errorMessage: "Whoops!  Something went wrong... Please refresh the browser and try your search query again."
+            errorMessage: "No results for topic.  Please try another query.",
+          });
+        }
+      })
+      .catch((err) => {
+        if (err.response.status === 401) {
+          this.setState({
+            query: [],
+            errorMessage: "There was no input.  Please type a valid query.",
+          });
+        } else {
+          this.setState({
+            query: [],
+            errorMessage:
+              "Whoops!  Something went wrong... Please refresh the browser and try your search query again.",
           });
         }
       });
-      
   };
 
   clearForms = () => {
     this.setState({
-      entry: ""
+      entry: "",
     });
   };
 
@@ -102,7 +102,6 @@ class Search extends Component {
   };
 
   render() {
-
     return (
       <Container fluid>
         <br />
@@ -151,9 +150,7 @@ class Search extends Component {
                   @{users.user.screen_name}
                 </p>
                 <p className="d-inline ml-2 user-handle">
-                  {moment(users.created_at)
-                    .format("MMM DD")
-                    .toString()}
+                  {moment(users.created_at).format("MMM DD").toString()}
                 </p>
                 <p className="d-block tweet-text">{users.full_text}</p>
                 <Image className="d-inline retweet-image" src={ReTweet} />

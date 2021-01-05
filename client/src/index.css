@@ -1,16 +1,33 @@
-body {
-  background-color: rgb(255, 202, 123);
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap');
+
+html, body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.85)),
+  url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
+  background-size: cover;
+  overflow: auto;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 .color-nav {
-  background-color: rgb(255, 164, 79);
+  background-color: rgb(255, 164, 79, 0.2);
+}
+
+a.navbar-brand {
+  font-family: 'Yellowtail', cursive;
+  color:rgb(	255, 202, 75) !important;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
 }
 
 ::placeholder {
   color: white;
 }
 
-.container {
-  background-color: rgb(255, 218, 162);
+.splash-main {
   color: white;
   margin-top: 100px;
   padding: 0 20px;
@@ -19,7 +36,9 @@ body {
 }
 
 .welcome-text {
+  font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
+  color:rgb(255, 202, 75) !important;
 }
 
 .error-message {

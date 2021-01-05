@@ -6,12 +6,12 @@ import twitterContainer from "./clipart-2-13-12-55-41.png";
 
 function SplashPage() {
   return (
-    <Container className="container" fluid>
+    <Container className="container splash-main" fluid>
       <Row>
         <Col className="d-inline mt-5 mb-5">
-        <h2 className="welcome-text text-center">Welcome To Twitter Search Api</h2>
+        <h2 className="welcome-text text-center">Welcome To Tweet Your Heart Out</h2>
         <h6 className="d-block text-center describe"><strong>Search</strong> for user and topic tweets or view a <strong>random</strong> tweet from one of my five favorite twitter users.</h6>
-        <Image className="d-inline mt-3 mb-4 ml-5 twitter-logo" src={twitterContainer} />
+        <Image className="d-inline-block mt-3 mb-4 ml-5 twitter-logo" src={twitterContainer} />
         </Col>
       </Row>
     
