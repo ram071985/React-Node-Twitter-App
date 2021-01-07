@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap');
 
 html, body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.85)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
   url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
   background-size: cover;
   overflow: auto;
@@ -16,11 +16,18 @@ html, body {
 
 a.navbar-brand {
   font-family: 'Yellowtail', cursive;
-  color:rgb(	255, 202, 75) !important;
+  color: #fc4e16 !important;
 }
 
 .nav-link {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white !important;
+  opacity: 0.8;
+}
+
+.nav-link:hover {
+  color: #fc4e16 !important;
 }
 
 ::placeholder {
@@ -37,8 +44,24 @@ a.navbar-brand {
 
 .welcome-text {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 4rem;
-  color:rgb(255, 202, 75) !important;
+  color: #de3f53;
+  padding: 0 !important;
+}
+
+#welcome {
+  font-size: 3.2rem;
+  color: rgb(223, 223, 223);
+  font-weight: 800;
+}
+
+#tweet {
+  opacity: 0.95;
+  font-size: 5.5rem;
+  margin-bottom: 40px;
+  font-family: 'Yellowtail', cursive;
+  color: #fc4e16 !important;
 }
 
 .error-message {
@@ -62,14 +85,21 @@ a.navbar-brand {
 }
 
 .twitter-logo {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   opacity: 0.8;
+  margin: 0 auto;
+  opacity: 0.2;
 }
 
 .describe {
-  color: black;
-  opacity: 0.8;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(223, 223, 223);
+  opacity: 0.95;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 0px 80px 0px 80px;
 }
 
 .control-form {
