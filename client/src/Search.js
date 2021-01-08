@@ -103,14 +103,14 @@ class Search extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container className="search-container" fluid>
         <br />
         <br />
         <Row>
           <Col>
             <Form.Group>
               <Form.Control
-                className="control-form"
+                className="control-form search-input"
                 type="input"
                 name="entry"
                 onChange={this.handleChange}

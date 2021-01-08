@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap");
 
-html, body {
+html,
+body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
-  url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
+    url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
   background-size: cover;
   overflow: auto;
   background-repeat: no-repeat;
@@ -15,12 +16,12 @@ html, body {
 }
 
 a.navbar-brand {
-  font-family: 'Yellowtail', cursive;
+  font-family: "Yellowtail", cursive;
   color: #fc4e16 !important;
 }
 
 .nav-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: white !important;
   opacity: 0.8;
@@ -43,7 +44,7 @@ a.navbar-brand {
 }
 
 .welcome-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 4rem;
   color: #de3f53;
@@ -51,16 +52,17 @@ a.navbar-brand {
 }
 
 #welcome {
-  font-size: 3.2rem;
+  font-size: 3.3rem;
   color: rgb(223, 223, 223);
   font-weight: 800;
+  margin-top: 2.8rem;
 }
 
 #tweet {
   opacity: 0.95;
   font-size: 5.5rem;
-  margin-bottom: 40px;
-  font-family: 'Yellowtail', cursive;
+  margin-bottom: 3rem;
+  font-family: "Yellowtail", cursive;
   color: #fc4e16 !important;
 }
 
@@ -93,7 +95,7 @@ a.navbar-brand {
 }
 
 .describe {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgb(223, 223, 223);
   opacity: 0.95;
   font-size: 1.3rem;
@@ -244,6 +246,21 @@ div.col-4-4.col {
   color: white !important;
 }
 
+.search-container {
+  margin-top: 12rem;
+}
+
+.search-input {
+  border-radius: 0;
+  background: transparent;
+}
+
+.search-input, input,
+select,
+textarea:focus {
+  background: transparent !important;
+}
+
 @media (min-width: 776px) {
   .handle-button.btn.btn-primary {
     margin-right: 75px !important;
@@ -333,7 +350,6 @@ div.col-4-4.col {
 }
 
 @media screen and (max-width: 500px) {
-
   .row {
     margin: 0;
   }
@@ -427,7 +443,6 @@ div.col-4-4.col {
     height: 95px;
   }
   .container {
-    background-color: rgb(255, 218, 162);
     color: white;
     margin-top: 100px;
     padding: 0px 0px !important;
