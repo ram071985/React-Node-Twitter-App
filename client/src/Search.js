@@ -103,11 +103,11 @@ class Search extends Component {
 
   render() {
     return (
-      <Container className="search-container" fluid>
+      <Container className="justify-content-center search-container" fluid>
         <br />
         <br />
-        <Row>
-          <Col>
+        <Row className="justify-content-center">
+          <Col className="justify-content-center">
             <Form.Group>
               <Form.Control
                 className="control-form search-input"
@@ -115,6 +115,7 @@ class Search extends Component {
                 name="entry"
                 onChange={this.handleChange}
                 placeholder="Search Twitter..."
+                autoComplete="off"
               />
             </Form.Group>
             {this.handleError()}
@@ -123,14 +124,14 @@ class Search extends Component {
               type="button"
               className="handle-button"
               onClick={this.getUserHandle}
-              placeholder="Search By User Handle"
+              placeholder="Search @username"
             />
             <Button
               className="topic-button"
               as="input"
               onClick={this.getTopic}
               type="button"
-              placeholder="Search By Topic"
+              placeholder="Search topic"
             />
           </Col>
         </Row>

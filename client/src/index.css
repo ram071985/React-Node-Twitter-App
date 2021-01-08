@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap");
 
 html,
-body {
+body, #root, .app {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
     url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
   background-size: cover;
@@ -10,9 +10,17 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0 !important;
+  min-width: 100%;
 }
 .color-nav {
   background-color: rgb(255, 164, 79, 0.2);
+}
+
+input.btn {
+  border-radius: 0 !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 a.navbar-brand {
@@ -252,18 +260,37 @@ div.col-4-4.col {
 
 .search-input {
   border-radius: 0;
-  background: transparent;
+  background: rgba(94, 94, 94, 0.5) !important;
+  color: white;
 }
 
-.search-input, input,
+.search-input::placeholder {
+  color: rgb(158, 158, 158);
+  font-family: "Montserrat", sans-serif;
+}
+
+.search-input,
+select,
+textarea {
+  color: white !important;
+}
+
+.search-input:focus {
+  background: rgba(94, 94, 94, 0.5) !important;
+}
+
+.search-input,
 select,
 textarea:focus {
-  background: transparent !important;
+  background: rgba(94, 94, 94, 0.5) !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border-color: rgb(211, 211, 211) !important;
 }
 
 @media (min-width: 776px) {
   .handle-button.btn.btn-primary {
-    margin-right: 75px !important;
+
   }
   .btn.eckhart-random {
     margin: 5px 30px 5px 30px !important;

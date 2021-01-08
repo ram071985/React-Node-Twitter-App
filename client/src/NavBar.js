@@ -11,7 +11,7 @@ class NavBar extends Component {
   render() {
   return (
     <Router>
-      <Container>
+      <div>
         <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
           <Navbar.Brand as={Link} to="/">
             <h2>Tweet Your Heart Out</h2>
@@ -42,7 +42,7 @@ class NavBar extends Component {
              <Random />
           </Route>
         </Switch>
-      </Container>
+      </div>
     </Router>
   );
   }
