@@ -103,37 +103,39 @@ class Search extends Component {
 
   render() {
     return (
-      <Container className="justify-content-center search-container" fluid>
+      <Container className="search-container" fluid>
         <br />
         <br />
-        <Row className="justify-content-center">
-          <Col className="justify-content-center">
-            <Form.Group>
-              <Form.Control
-                className="control-form search-input"
-                type="input"
-                name="entry"
-                onChange={this.handleChange}
-                placeholder="Search Twitter..."
-                autoComplete="off"
-              />
-            </Form.Group>
-            {this.handleError()}
-            <Button
-              as="input"
-              type="button"
-              className="handle-button"
-              onClick={this.getUserHandle}
-              placeholder="Search @username"
+        <Row className="justify-content-center search-row">
+        <form className="justify-content-center search-form">
+          <Form.Group>
+            <Form.Control
+              className="control-form search-input"
+              type="input"
+              name="entry"
+              onChange={this.handleChange}
+              placeholder="Search Twitter..."
+              autoComplete="off"
             />
-            <Button
-              className="topic-button"
-              as="input"
-              onClick={this.getTopic}
-              type="button"
-              placeholder="Search topic"
-            />
-          </Col>
+          </Form.Group>
+
+          {this.handleError()}
+          
+          <Button
+            as="input"
+            type="button"
+            className="handle-button"
+            onClick={this.getUserHandle}
+            placeholder="Search @username"
+          />
+          <Button
+            className="mx-auto topic-button"
+            as="input"
+            onClick={this.getTopic}
+            type="button"
+            placeholder="Search topic"
+          />
+          </form>
         </Row>
         <br />
         {this.state.query.map((users, index) => (

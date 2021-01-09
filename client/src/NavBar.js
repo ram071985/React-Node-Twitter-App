@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import Search from "./Search.js";
@@ -11,7 +11,7 @@ class NavBar extends Component {
   render() {
   return (
     <Router>
-      <div>
+      <div className="route-container">
         <Navbar className="color-nav" fixed="top" expand="lg" variant="dark">
           <Navbar.Brand as={Link} to="/">
             <h2>Tweet Your Heart Out</h2>

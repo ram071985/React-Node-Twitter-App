@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,700&display=swap");
 
 html,
-body, #root, .app {
+body,
+#root,
+.app,
+.nav-div {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
     url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
   background-size: cover;
@@ -252,6 +255,7 @@ div.col-4-4.col {
 .btn.handle-button,
 .btn.topic-button {
   color: white !important;
+  margin-right: 10px;
 }
 
 .search-container {
@@ -259,6 +263,7 @@ div.col-4-4.col {
 }
 
 .search-input {
+  width: 100%;
   border-radius: 0;
   background: rgba(94, 94, 94, 0.5) !important;
   color: white;
@@ -288,10 +293,15 @@ textarea:focus {
   border-color: rgb(211, 211, 211) !important;
 }
 
-@media (min-width: 776px) {
-  .handle-button.btn.btn-primary {
+form.search-form {
+  min-width: 25rem;
+}
 
-  }
+.btn.topic-button {
+  margin: 0px 5px 0px 50px;
+}
+
+@media (min-width: 776px) {
   .btn.eckhart-random {
     margin: 5px 30px 5px 30px !important;
     width: 200px;
@@ -366,17 +376,23 @@ textarea:focus {
   .topic-button {
     display: block;
   }
+  .btn {
+    display: block;
+    margin: 0 auto !important;
+    width: 100%;
+    margin-bottom: 15px !important;
+  }
 
   .btn.handle-button {
-    margin: 0px 5px 10px 50px;
+    margin: 0px 5px 0px 10px;
   }
 }
 
-.btn.topic-button {
-  margin: 0px 5px 0px 50px;
-}
-
 @media screen and (max-width: 500px) {
+  .form-control {
+    width: 100% !important;
+  }
+
   .row {
     margin: 0;
   }
@@ -410,12 +426,19 @@ textarea:focus {
     padding: 0 50px;
   }
 
+  .btn {
+    width: 100%;
+    display: block;
+    margin: 0 auto !important;
+    margin-bottom: 15px !important;
+  }
+
   .btn.handle-button {
-    margin: 0px 5px 10px 50px;
+    margin: 0px 10px 10px 0px;
   }
 
   .btn.topic-button {
-    margin: 0px 5px 10px 50px;
+    margin: 0px 5px 10px 10px;
   }
 
   .col {
