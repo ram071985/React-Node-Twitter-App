@@ -6,7 +6,7 @@ body,
 #root,
 .app,
 .nav-div {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
+  background-image: linear-gradient(rgba(17, 17, 17, 0.75), rgba(8, 8, 8, 0.9)),
     url("./images/chris-j-davis-7ezFz2Hxd40-unsplash.jpg");
   background-size: cover;
   overflow: auto;
@@ -24,6 +24,13 @@ body,
 input.btn {
   border-radius: 0 !important;
   font-family: "Montserrat", sans-serif;
+  background: #394948;
+  border:  solid 1px rgb(153, 153, 153);
+}
+
+input.btn:hover {
+  background: #4e6361;
+  border:  solid 1px rgb(153, 153, 153);
 }
 
 a.navbar-brand {
@@ -267,11 +274,14 @@ div.col-4-4.col {
   border-radius: 0;
   background: rgba(94, 94, 94, 0.5) !important;
   color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .search-input::placeholder {
   color: rgb(158, 158, 158);
-  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
 }
 
 .search-input,
