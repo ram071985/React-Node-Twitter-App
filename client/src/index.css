@@ -33,6 +33,11 @@ input.btn:hover {
   border:  solid 1px rgb(153, 153, 153);
 }
 
+input.btn:focus { 
+  background: #4e6361;
+  border:  solid 1px rgb(153, 153, 153);
+}
+
 a.navbar-brand {
   font-family: "Yellowtail", cursive;
   color: #fc4e16 !important;
@@ -127,7 +132,7 @@ a.navbar-brand {
 }
 
 .real-name {
-  color: black;
+  color: white;
 }
 
 .user-handle {
@@ -146,7 +151,7 @@ a.navbar-brand {
 }
 
 .tweet-col {
-  background-color: white !important;
+  background-color: rgb(39, 39, 39, 0.7) !important;
 }
 
 .tweet-col.col img {
@@ -154,7 +159,7 @@ a.navbar-brand {
 }
 
 .tweet-text {
-  color: black;
+  color: white;
   margin-left: 65px;
   text-align: left;
   padding-right: 80px;
@@ -180,7 +185,7 @@ a.navbar-brand {
   position: absolute;
   left: 130px;
   bottom: 8px;
-  color: black;
+  color: white;
 }
 
 .like-num {
@@ -188,7 +193,7 @@ a.navbar-brand {
   left: 248px;
   bottom: 8px;
   position: absolute;
-  color: black;
+  color: white;
 }
 
 .favorite-name {
@@ -399,6 +404,10 @@ form.search-form {
 }
 
 @media screen and (max-width: 500px) {
+
+  .search-container {
+    margin-top: 5rem;
+  }
   .form-control {
     width: 100% !important;
   }
@@ -420,13 +429,12 @@ form.search-form {
   }
   .tweet-row {
     height: 350px;
-    width: 350px;
     margin: 10px;
   }
   .tweet-text {
     margin-left: 59px;
   }
-  .tweet-col.col {
+  .tweet-col {
     padding: 0px 0px 0px 0px !important;
     margin-right: 20px !important;
   }
