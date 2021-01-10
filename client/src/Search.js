@@ -107,34 +107,34 @@ class Search extends Component {
         <br />
         <br />
         <Row className="justify-content-center search-row">
-        <form className="justify-content-center search-form">
-          <Form.Group>
-            <Form.Control
-              className="control-form search-input"
-              type="input"
-              name="entry"
-              onChange={this.handleChange}
-              placeholder="Search Twitter..."
-              autoComplete="off"
-            />
-          </Form.Group>
+          <form className="justify-content-center search-form">
+            <Form.Group>
+              <Form.Control
+                className="control-form search-input"
+                type="input"
+                name="entry"
+                onChange={this.handleChange}
+                placeholder="Search Twitter..."
+                autoComplete="off"
+              />
+            </Form.Group>
 
-          {this.handleError()}
-          
-          <Button
-            as="input"
-            type="button"
-            className="handle-button"
-            onClick={this.getUserHandle}
-            placeholder="Search @username"
-          />
-          <Button
-            className="mx-auto topic-button"
-            as="input"
-            onClick={this.getTopic}
-            type="button"
-            placeholder="Search topic"
-          />
+            {this.handleError()}
+
+            <Button
+              as="input"
+              type="button"
+              className="handle-button"
+              onClick={this.getUserHandle}
+              placeholder="Search @username"
+            />
+            <Button
+              className="mx-auto topic-button"
+              as="input"
+              onClick={this.getTopic}
+              type="button"
+              placeholder="Search topic"
+            />
           </form>
         </Row>
         <br />

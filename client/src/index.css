@@ -294,7 +294,7 @@ textarea:focus {
 }
 
 form.search-form {
-  min-width: 25rem;
+
 }
 
 .btn.topic-button {
@@ -427,7 +427,7 @@ form.search-form {
   }
 
   .btn {
-    width: 100%;
+    width: 76%;
     display: block;
     margin: 0 auto !important;
     margin-bottom: 15px !important;
@@ -512,5 +512,11 @@ form.search-form {
     position: absolute;
     top: 32px;
     left: 55px;
+  }
+
+  .search-input {
+    margin-right: 20px !important;
+    margin: 0 auto;
+    width: 253px !important;
   }
 }
