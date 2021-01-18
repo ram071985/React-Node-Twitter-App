@@ -257,7 +257,11 @@ div.col-4-4.col {
 }
 
 .choose-text {
-  color: black;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 9rem !important;
+  margin-bottom: 3rem;
+  color: white;
+  font-weight: 600;
 }
 
 .column-four.col {
@@ -517,8 +521,9 @@ form.search-form {
     width: 100%;
     height: 100%;
   }
-  .container-random.container-fluid {
+  div.container-random.container-fluid{
     padding: 0px 0px;
+    margin-top: 200px !important;
   }
 
   .tweet-card.container {
